@@ -1,0 +1,9 @@
+.chapter-number {
+    display: none;
+}
+
+yrchapternumber { color: red; font-size: 200%; }
+
+.yrAppendixChapterNumber {
+    display: none;
+}
