@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>r notes - 13&nbsp; 12-a.  Automatic (or “implicit”) conversions - numeric to logical - logical to numeric</title>
+<title>r notes - 13&nbsp; 12b.  Automatic (or “implicit”) conversions - numeric to logical - logical to numeric</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,7 +119,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./000065-quartoBook_part1_midterm2023-v001.html">Midterm Topics (Fall 2023)</a></li><li class="breadcrumb-item"><a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./000065-quartoBook_part1_midterm2023-v001.html">Midterm Topics (Fall 2023)</a></li><li class="breadcrumb-item"><a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -228,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12a. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-b. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -548,9 +548,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./000065-quartoBook_part1_midterm2023-v001.html">Midterm Topics (Fall 2023)</a></li><li class="breadcrumb-item"><a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./000065-quartoBook_part1_midterm2023-v001.html">Midterm Topics (Fall 2023)</a></li><li class="breadcrumb-item"><a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or “implicit”) conversions - numeric to logical - logical to numeric</span></h1>
+<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or “implicit”) conversions - numeric to logical - logical to numeric</span></h1>
 </div>
 
 
@@ -1520,12 +1520,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./000350-j_j-indexingWithLogicalValues_notOperator-v060.html" class="pagination-link  aria-label=" &lt;span="" &lt;="" yrchapternumber&gt;="" indexing="" with="" logicals,="" e.g.="" somevector="" [="" c(true,="" false,="" true)="" ]&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12. </yrchapternumber> Indexing with logicals, e.g.&nbsp;someVector [ c(TRUE, FALSE, TRUE) ]</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12a. </yrchapternumber> Indexing with logicals, e.g.&nbsp;someVector [ c(TRUE, FALSE, TRUE) ]</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="pagination-link" aria-label="<span class='chapter-number'>14</span>&nbsp; <span class='chapter-title'><yrChapterNumber>12-b. </yrChapterNumber> (a) EXCLAMATION POINT (i.e the &quot;not&quot; operator)  (b) is.na( LOGICAL_VECTOR )</span>">
-        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-b. </yrchapternumber> (a) EXCLAMATION POINT (i.e the “not” operator) (b) is.na( LOGICAL_VECTOR )</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="pagination-link" aria-label="<span class='chapter-number'>14</span>&nbsp; <span class='chapter-title'><yrChapterNumber>12c. </yrChapterNumber> (a) EXCLAMATION POINT (i.e the &quot;not&quot; operator)  (b) is.na( LOGICAL_VECTOR )</span>">
+        <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the “not” operator) (b) is.na( LOGICAL_VECTOR )</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

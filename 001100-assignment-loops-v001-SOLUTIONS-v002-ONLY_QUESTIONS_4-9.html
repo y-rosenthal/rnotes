@@ -228,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12a. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-b. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -657,19 +657,19 @@ click here for answer - part a
 </div>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 5</code></pre>
+<pre><code>[1] 6 3</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4 3</code></pre>
+<pre><code>[1] 6 4</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 4 3 2 5</code></pre>
+<pre><code>[1] 3 4 5 1 2</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4 3 2 5 1</code></pre>
+<pre><code>[1] 1 6 2 5 4</code></pre>
 </div>
 </div>
 </div>
@@ -703,23 +703,23 @@ click here for answer - part b
 </div>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3</code></pre>
+<pre><code>[1] 6</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4 2</code></pre>
+<pre><code>[1] 1 6</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5 2</code></pre>
+<pre><code>[1] 4 3</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4 6 3 4 2</code></pre>
+<pre><code>[1] 2 2 6 1 2</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2 4 4 5 3</code></pre>
+<pre><code>[1] 6 2 2 4 4</code></pre>
 </div>
 </div>
 </div>
@@ -762,7 +762,7 @@ click here for answer - part c
 <span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Examples</span></span>
 <span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 4</code></pre>
+<pre><code>[1] 6</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -770,19 +770,19 @@ click here for answer - part c
 </div>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3 3</code></pre>
+<pre><code>[1] 2 5</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 3 2</code></pre>
+<pre><code>[1] 4 5</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 4 5 5 1</code></pre>
+<pre><code>[1] 1 3 6 4 6</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rollDice</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2 6 1 4 5</code></pre>
+<pre><code>[1] 4 1 4 1 5</code></pre>
 </div>
 </div>
 </div>
@@ -907,15 +907,31 @@ click here for answer
 <span id="cb39-34"><a href="#cb39-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb39-35"><a href="#cb39-35" aria-hidden="true" tabindex="-1"></a>numRolls <span class="ot">&lt;-</span> <span class="fu">keepRollingUntilSnakeEyes</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1 was: 5 and 5
-roll #2 was: 2 and 6
-roll #3 was: 1 and 6
-roll #4 was: 3 and 3
-roll #5 was: 1 and 1</code></pre>
+<pre><code>roll #1 was: 5 and 4
+roll #2 was: 3 and 4
+roll #3 was: 5 and 6
+roll #4 was: 3 and 2
+roll #5 was: 2 and 4
+roll #6 was: 4 and 2
+roll #7 was: 4 and 3
+roll #8 was: 2 and 4
+roll #9 was: 2 and 6
+roll #10 was: 1 and 3
+roll #11 was: 4 and 4
+roll #12 was: 5 and 1
+roll #13 was: 4 and 5
+roll #14 was: 2 and 2
+roll #15 was: 1 and 4
+roll #16 was: 5 and 1
+roll #17 was: 6 and 3
+roll #18 was: 5 and 4
+roll #19 was: 5 and 6
+roll #20 was: 3 and 4
+roll #21 was: 1 and 1</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>numRolls</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
+<pre><code>[1] 21</code></pre>
 </div>
 </div>
 </div>
@@ -1024,38 +1040,106 @@ click here for answer
 <span id="cb44-39"><a href="#cb44-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb44-40"><a href="#cb44-40" aria-hidden="true" tabindex="-1"></a><span class="fu">keepRollingUntilSnakeEyes</span>()        <span class="co"># this will not show output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 76</code></pre>
+<pre><code>[1] 18</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">keepRollingUntilSnakeEyes</span>(<span class="at">showOutput =</span> <span class="cn">FALSE</span>)  <span class="co"># nor will this</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 9</code></pre>
+<pre><code>[1] 17</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">keepRollingUntilSnakeEyes</span>(<span class="cn">FALSE</span>)               <span class="co"># nor will this</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 15</code></pre>
+<pre><code>[1] 50</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">keepRollingUntilSnakeEyes</span>(<span class="cn">TRUE</span>)    <span class="co"># this WILL show output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1 was: 5 and 3
-roll #2 was: 3 and 6
-roll #3 was: 5 and 6
-roll #4 was: 6 and 4
-roll #5 was: 1 and 1</code></pre>
+<pre><code>roll #1 was: 4 and 3
+roll #2 was: 3 and 2
+roll #3 was: 3 and 5
+roll #4 was: 3 and 2
+roll #5 was: 3 and 2
+roll #6 was: 5 and 6
+roll #7 was: 4 and 5
+roll #8 was: 1 and 3
+roll #9 was: 6 and 6
+roll #10 was: 4 and 2
+roll #11 was: 6 and 2
+roll #12 was: 6 and 5
+roll #13 was: 1 and 6
+roll #14 was: 4 and 2
+roll #15 was: 2 and 4
+roll #16 was: 1 and 3
+roll #17 was: 1 and 4
+roll #18 was: 1 and 5
+roll #19 was: 1 and 3
+roll #20 was: 4 and 2
+roll #21 was: 6 and 3
+roll #22 was: 6 and 4
+roll #23 was: 2 and 2
+roll #24 was: 2 and 1
+roll #25 was: 3 and 4
+roll #26 was: 1 and 1</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 5</code></pre>
+<pre><code>[1] 26</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">keepRollingUntilSnakeEyes</span>(<span class="at">showOutput =</span> <span class="cn">TRUE</span>) <span class="co"># this WILL show output</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1 was: 2 and 4
-roll #2 was: 3 and 4
-roll #3 was: 6 and 2
-roll #4 was: 4 and 4
-roll #5 was: 5 and 1
-roll #6 was: 1 and 1</code></pre>
+<pre><code>roll #1 was: 6 and 3
+roll #2 was: 6 and 4
+roll #3 was: 1 and 4
+roll #4 was: 5 and 6
+roll #5 was: 5 and 2
+roll #6 was: 3 and 6
+roll #7 was: 1 and 2
+roll #8 was: 5 and 3
+roll #9 was: 5 and 1
+roll #10 was: 2 and 2
+roll #11 was: 6 and 1
+roll #12 was: 6 and 6
+roll #13 was: 1 and 3
+roll #14 was: 1 and 3
+roll #15 was: 3 and 3
+roll #16 was: 2 and 3
+roll #17 was: 4 and 2
+roll #18 was: 5 and 3
+roll #19 was: 3 and 1
+roll #20 was: 6 and 5
+roll #21 was: 1 and 6
+roll #22 was: 6 and 3
+roll #23 was: 4 and 2
+roll #24 was: 5 and 2
+roll #25 was: 3 and 2
+roll #26 was: 1 and 3
+roll #27 was: 6 and 2
+roll #28 was: 3 and 3
+roll #29 was: 2 and 2
+roll #30 was: 5 and 6
+roll #31 was: 4 and 1
+roll #32 was: 5 and 4
+roll #33 was: 4 and 1
+roll #34 was: 2 and 3
+roll #35 was: 5 and 2
+roll #36 was: 4 and 5
+roll #37 was: 1 and 5
+roll #38 was: 3 and 6
+roll #39 was: 1 and 3
+roll #40 was: 2 and 3
+roll #41 was: 4 and 2
+roll #42 was: 6 and 3
+roll #43 was: 6 and 6
+roll #44 was: 3 and 6
+roll #45 was: 5 and 1
+roll #46 was: 3 and 6
+roll #47 was: 6 and 2
+roll #48 was: 4 and 1
+roll #49 was: 4 and 3
+roll #50 was: 4 and 2
+roll #51 was: 3 and 4
+roll #52 was: 3 and 4
+roll #53 was: 1 and 1</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
+<pre><code>[1] 53</code></pre>
 </div>
 </div>
 </div>
@@ -1173,11 +1257,11 @@ click here for answer - parts a and b
 <span id="cb57-41"><a href="#cb57-41" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb57-42"><a href="#cb57-42" aria-hidden="true" tabindex="-1"></a><span class="fu">playManyTimes</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 16 13 13</code></pre>
+<pre><code>[1]  62 112  37</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">playManyTimes</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 33  2 44 20 78 47 21  1 17 19</code></pre>
+<pre><code> [1]  20   8  14   5  85 114  36  81   3  20</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------.</span></span>
 <span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This version uses a while loop</span></span>
@@ -1206,11 +1290,11 @@ click here for answer - parts a and b
 <span id="cb61-25"><a href="#cb61-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb61-26"><a href="#cb61-26" aria-hidden="true" tabindex="-1"></a><span class="fu">playManyTimes</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 81 79 38</code></pre>
+<pre><code>[1]  6  3 15</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">playManyTimes</span>(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 20 44 12 17 11 80 44 18 52 68</code></pre>
+<pre><code> [1] 31 12 34 52  3  4  2 31  2 76</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="do">##########.</span></span>
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="co"># PART C</span></span>
@@ -1233,8 +1317,8 @@ click here for answer - parts a and b
 <div class="cell-output cell-output-stdout">
 <pre><code>List of 6
  $ breaks  : num [1:17] 0 20 40 60 80 100 120 140 160 180 ...
- $ counts  : int [1:16] 4360 2404 1446 759 451 275 142 65 36 23 ...
- $ density : num [1:16] 0.0218 0.01202 0.00723 0.0038 0.00226 ...
+ $ counts  : int [1:16] 4335 2443 1396 785 458 264 138 84 43 29 ...
+ $ density : num [1:16] 0.02167 0.01222 0.00698 0.00392 0.00229 ...
  $ mids    : num [1:16] 10 30 50 70 90 110 130 150 170 190 ...
  $ xname   : chr "results"
  $ equidist: logi TRUE
@@ -1247,12 +1331,12 @@ click here for answer - parts a and b
  [1]   0  20  40  60  80 100 120 140 160 180 200 220 240 260 280 300 320
 
 $counts
- [1] 4360 2404 1446  759  451  275  142   65   36   23   20    9    4    3    1
+ [1] 4335 2443 1396  785  458  264  138   84   43   29    4    9    5    3    2
 [16]    2
 
 $density
- [1] 0.021800 0.012020 0.007230 0.003795 0.002255 0.001375 0.000710 0.000325
- [9] 0.000180 0.000115 0.000100 0.000045 0.000020 0.000015 0.000005 0.000010
+ [1] 0.021675 0.012215 0.006980 0.003925 0.002290 0.001320 0.000690 0.000420
+ [9] 0.000215 0.000145 0.000020 0.000045 0.000025 0.000015 0.000010 0.000010
 
 $mids
  [1]  10  30  50  70  90 110 130 150 170 190 210 230 250 270 290 310
@@ -1269,7 +1353,7 @@ attr(,"class")
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># show the contents of just the counts entry in h</span></span>
 <span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>h<span class="sc">$</span>counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 4360 2404 1446  759  451  275  142   65   36   23   20    9    4    3    1
+<pre><code> [1] 4335 2443 1396  785  458  264  138   84   43   29    4    9    5    3    2
 [16]    2</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># make sure that the sum of the counts is in fact 10,000 as it should be</span></span>
@@ -1437,10 +1521,8 @@ click here for answer
 <span id="cb75-60"><a href="#cb75-60" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb75-61"><a href="#cb75-61" aria-hidden="true" tabindex="-1"></a><span class="fu">playCraps</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1: 5
-roll #2: 4
-roll #3: 8
-roll #4: 5
+<pre><code>roll #1: 9
+roll #2: 9
 WIN</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
@@ -1448,17 +1530,7 @@ WIN</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">playCraps</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1: 5
-roll #2: 9
-roll #3: 9
-roll #4: 8
-roll #5: 3
-roll #6: 10
-roll #7: 12
-roll #8: 6
-roll #9: 8
-roll #10: 3
-roll #11: 5
+<pre><code>roll #1: 7
 WIN</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
@@ -1466,28 +1538,25 @@ WIN</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">playCraps</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1: 9
-roll #2: 7
-LOSE</code></pre>
+<pre><code>roll #1: 5
+roll #2: 9
+roll #3: 5
+WIN</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">playCraps</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>roll #1: 5
-roll #2: 3
-roll #3: 8
-roll #4: 4
-roll #5: 7
-LOSE</code></pre>
+<pre><code>roll #1: 7
+WIN</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE</code></pre>
+<pre><code>[1] TRUE</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">playCraps</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] TRUE</code></pre>
+<pre><code>[1] FALSE</code></pre>
 </div>
 </div>
 </div>
@@ -1569,7 +1638,7 @@ click here for answer
 <span id="cb90-27"><a href="#cb90-27" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">playCrapsManyTimes</span>(<span class="dv">100000</span>)</span>
 <span id="cb90-28"><a href="#cb90-28" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.4809</code></pre>
+<pre><code>[1] 0.48171</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------.</span></span>
 <span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This version uses a while loop</span></span>
@@ -1586,7 +1655,7 @@ click here for answer
 <span id="cb92-13"><a href="#cb92-13" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">playCrapsManyTimes</span>(<span class="dv">100000</span>)</span>
 <span id="cb92-14"><a href="#cb92-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.47829</code></pre>
+<pre><code>[1] 0.47779</code></pre>
 </div>
 </div>
 </div>

@@ -228,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12a. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-b. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1009,297 +1009,302 @@ Levels: 1 &lt; 2 &lt; 3 &lt; 4 &lt; 5</code></pre>
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(education)</span>
 <span id="cb62-2"><a href="#cb62-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-3"><a href="#cb62-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a>?factor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>starting httpd help server ... done</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Review of the Basic and complex "data structures" in R</span></span>
-<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co"># R has numerous "data structures". The following are the "basic"</span></span>
-<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="co"># data structures that we learned about:</span></span>
-<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co">#    - numeric, logical and character vectors  </span></span>
-<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="co">#      Note: there are other types of vectors that we did not cover, i.e.</span></span>
-<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">#            integer, double, complex and raw.</span></span>
-<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="co">#    - lists</span></span>
-<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="co">#    </span><span class="al">NOTE</span><span class="co">: Usually, the R documentation uses the terms "vector" and "list" as we</span></span>
-<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a><span class="co">#    have been using them. However, in some places, the R documentation uses the terms</span></span>
-<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a><span class="co">#    "atomic vector"    to refer to what we've been calling simply a "vector" and</span></span>
-<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a><span class="co">#    "recursive vector" to refer to what we've been calling a "list".</span></span>
-<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-18"><a href="#cb64-18" aria-hidden="true" tabindex="-1"></a><span class="co"># The following are more complex data structures that are built on </span></span>
-<span id="cb64-19"><a href="#cb64-19" aria-hidden="true" tabindex="-1"></a><span class="co"># top of R's "basic" data structures.</span></span>
-<span id="cb64-20"><a href="#cb64-20" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-21"><a href="#cb64-21" aria-hidden="true" tabindex="-1"></a><span class="co">#    - matrices  (A matrix is a vector that has a "dim" attribute</span></span>
-<span id="cb64-22"><a href="#cb64-22" aria-hidden="true" tabindex="-1"></a><span class="co">#                 The value of the "dim" attribute is a numeric vector</span></span>
-<span id="cb64-23"><a href="#cb64-23" aria-hidden="true" tabindex="-1"></a><span class="co">#                 that contains the number of rows and cols of the matrix)</span></span>
-<span id="cb64-24"><a href="#cb64-24" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-25"><a href="#cb64-25" aria-hidden="true" tabindex="-1"></a><span class="co">#    - factors   (A factor is a numeric vector that contains a </span></span>
-<span id="cb64-26"><a href="#cb64-26" aria-hidden="true" tabindex="-1"></a><span class="co">#                 "class" attribute, set to "factor" and a </span></span>
-<span id="cb64-27"><a href="#cb64-27" aria-hidden="true" tabindex="-1"></a><span class="co">#                 "levels" attribute set to a character vector with the names of the levels)</span></span>
-<span id="cb64-28"><a href="#cb64-28" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-29"><a href="#cb64-29" aria-hidden="true" tabindex="-1"></a><span class="co">#    - dataframes (We didn't cover this yet.</span></span>
-<span id="cb64-30"><a href="#cb64-30" aria-hidden="true" tabindex="-1"></a><span class="co">#                 A dataframe is a list of vectors, all of the same length.</span></span>
-<span id="cb64-31"><a href="#cb64-31" aria-hidden="true" tabindex="-1"></a><span class="co">#                 The list has the following attributes:</span></span>
-<span id="cb64-32"><a href="#cb64-32" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-33"><a href="#cb64-33" aria-hidden="true" tabindex="-1"></a><span class="co">#                   name of attribute  value of attribute</span></span>
-<span id="cb64-34"><a href="#cb64-34" aria-hidden="true" tabindex="-1"></a><span class="co">#                   -----------------  ------------------</span></span>
-<span id="cb64-35"><a href="#cb64-35" aria-hidden="true" tabindex="-1"></a><span class="co">#                   class              "data.frame"</span></span>
-<span id="cb64-36"><a href="#cb64-36" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-37"><a href="#cb64-37" aria-hidden="true" tabindex="-1"></a><span class="co">#                   names              character vector with the names of </span></span>
-<span id="cb64-38"><a href="#cb64-38" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      the columns of the dataframe</span></span>
-<span id="cb64-39"><a href="#cb64-39" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-40"><a href="#cb64-40" aria-hidden="true" tabindex="-1"></a><span class="co">#                   row.names          character vector with the names of </span></span>
-<span id="cb64-41"><a href="#cb64-41" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      rows of the dataframe.</span></span>
-<span id="cb64-42"><a href="#cb64-42" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb64-43"><a href="#cb64-43" aria-hidden="true" tabindex="-1"></a><span class="co">#   - R contains many other more complex arrangements of data</span></span>
-<span id="cb64-44"><a href="#cb64-44" aria-hidden="true" tabindex="-1"></a><span class="co">#     (ie. data structures) that are constructed from</span></span>
-<span id="cb64-45"><a href="#cb64-45" aria-hidden="true" tabindex="-1"></a><span class="co">#     vectors, lists and attributes.</span></span>
-<span id="cb64-46"><a href="#cb64-46" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb64-47"><a href="#cb64-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-48"><a href="#cb64-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-49"><a href="#cb64-49" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>( <span class="at">student =</span> <span class="fu">c</span>(<span class="st">"joe"</span>, <span class="st">"sue"</span>, <span class="st">"anne"</span>),</span>
-<span id="cb64-50"><a href="#cb64-50" aria-hidden="true" tabindex="-1"></a>                 <span class="at">test1 =</span> <span class="fu">c</span>(<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>),</span>
-<span id="cb64-51"><a href="#cb64-51" aria-hidden="true" tabindex="-1"></a>                 <span class="at">tes2 =</span> <span class="fu">c</span>(<span class="dv">75</span>,<span class="dv">85</span>,<span class="dv">95</span>))</span>
-<span id="cb64-52"><a href="#cb64-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-53"><a href="#cb64-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb64-54"><a href="#cb64-54" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb62-4"><a href="#cb62-4" aria-hidden="true" tabindex="-1"></a><span class="co"># View the help page by typing: </span></span>
+<span id="cb62-5"><a href="#cb62-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-6"><a href="#cb62-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   ?factor</span></span>
+<span id="cb62-7"><a href="#cb62-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-8"><a href="#cb62-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-9"><a href="#cb62-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-10"><a href="#cb62-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-11"><a href="#cb62-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-12"><a href="#cb62-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-13"><a href="#cb62-13" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb62-14"><a href="#cb62-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Review of the Basic and complex "data structures" in R</span></span>
+<span id="cb62-15"><a href="#cb62-15" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb62-16"><a href="#cb62-16" aria-hidden="true" tabindex="-1"></a><span class="co"># R has numerous "data structures". The following are the "basic"</span></span>
+<span id="cb62-17"><a href="#cb62-17" aria-hidden="true" tabindex="-1"></a><span class="co"># data structures that we learned about:</span></span>
+<span id="cb62-18"><a href="#cb62-18" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-19"><a href="#cb62-19" aria-hidden="true" tabindex="-1"></a><span class="co">#    - numeric, logical and character vectors  </span></span>
+<span id="cb62-20"><a href="#cb62-20" aria-hidden="true" tabindex="-1"></a><span class="co">#      Note: there are other types of vectors that we did not cover, i.e.</span></span>
+<span id="cb62-21"><a href="#cb62-21" aria-hidden="true" tabindex="-1"></a><span class="co">#            integer, double, complex and raw.</span></span>
+<span id="cb62-22"><a href="#cb62-22" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-23"><a href="#cb62-23" aria-hidden="true" tabindex="-1"></a><span class="co">#    - lists</span></span>
+<span id="cb62-24"><a href="#cb62-24" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-25"><a href="#cb62-25" aria-hidden="true" tabindex="-1"></a><span class="co">#    </span><span class="al">NOTE</span><span class="co">: Usually, the R documentation uses the terms "vector" and "list" as we</span></span>
+<span id="cb62-26"><a href="#cb62-26" aria-hidden="true" tabindex="-1"></a><span class="co">#    have been using them. However, in some places, the R documentation uses the terms</span></span>
+<span id="cb62-27"><a href="#cb62-27" aria-hidden="true" tabindex="-1"></a><span class="co">#    "atomic vector"    to refer to what we've been calling simply a "vector" and</span></span>
+<span id="cb62-28"><a href="#cb62-28" aria-hidden="true" tabindex="-1"></a><span class="co">#    "recursive vector" to refer to what we've been calling a "list".</span></span>
+<span id="cb62-29"><a href="#cb62-29" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-30"><a href="#cb62-30" aria-hidden="true" tabindex="-1"></a><span class="co"># The following are more complex data structures that are built on </span></span>
+<span id="cb62-31"><a href="#cb62-31" aria-hidden="true" tabindex="-1"></a><span class="co"># top of R's "basic" data structures.</span></span>
+<span id="cb62-32"><a href="#cb62-32" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-33"><a href="#cb62-33" aria-hidden="true" tabindex="-1"></a><span class="co">#    - matrices  (A matrix is a vector that has a "dim" attribute</span></span>
+<span id="cb62-34"><a href="#cb62-34" aria-hidden="true" tabindex="-1"></a><span class="co">#                 The value of the "dim" attribute is a numeric vector</span></span>
+<span id="cb62-35"><a href="#cb62-35" aria-hidden="true" tabindex="-1"></a><span class="co">#                 that contains the number of rows and cols of the matrix)</span></span>
+<span id="cb62-36"><a href="#cb62-36" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-37"><a href="#cb62-37" aria-hidden="true" tabindex="-1"></a><span class="co">#    - factors   (A factor is a numeric vector that contains a </span></span>
+<span id="cb62-38"><a href="#cb62-38" aria-hidden="true" tabindex="-1"></a><span class="co">#                 "class" attribute, set to "factor" and a </span></span>
+<span id="cb62-39"><a href="#cb62-39" aria-hidden="true" tabindex="-1"></a><span class="co">#                 "levels" attribute set to a character vector with the names of the levels)</span></span>
+<span id="cb62-40"><a href="#cb62-40" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-41"><a href="#cb62-41" aria-hidden="true" tabindex="-1"></a><span class="co">#    - dataframes (We didn't cover this yet.</span></span>
+<span id="cb62-42"><a href="#cb62-42" aria-hidden="true" tabindex="-1"></a><span class="co">#                 A dataframe is a list of vectors, all of the same length.</span></span>
+<span id="cb62-43"><a href="#cb62-43" aria-hidden="true" tabindex="-1"></a><span class="co">#                 The list has the following attributes:</span></span>
+<span id="cb62-44"><a href="#cb62-44" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-45"><a href="#cb62-45" aria-hidden="true" tabindex="-1"></a><span class="co">#                   name of attribute  value of attribute</span></span>
+<span id="cb62-46"><a href="#cb62-46" aria-hidden="true" tabindex="-1"></a><span class="co">#                   -----------------  ------------------</span></span>
+<span id="cb62-47"><a href="#cb62-47" aria-hidden="true" tabindex="-1"></a><span class="co">#                   class              "data.frame"</span></span>
+<span id="cb62-48"><a href="#cb62-48" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-49"><a href="#cb62-49" aria-hidden="true" tabindex="-1"></a><span class="co">#                   names              character vector with the names of </span></span>
+<span id="cb62-50"><a href="#cb62-50" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      the columns of the dataframe</span></span>
+<span id="cb62-51"><a href="#cb62-51" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-52"><a href="#cb62-52" aria-hidden="true" tabindex="-1"></a><span class="co">#                   row.names          character vector with the names of </span></span>
+<span id="cb62-53"><a href="#cb62-53" aria-hidden="true" tabindex="-1"></a><span class="co">#                                      rows of the dataframe.</span></span>
+<span id="cb62-54"><a href="#cb62-54" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb62-55"><a href="#cb62-55" aria-hidden="true" tabindex="-1"></a><span class="co">#   - R contains many other more complex arrangements of data</span></span>
+<span id="cb62-56"><a href="#cb62-56" aria-hidden="true" tabindex="-1"></a><span class="co">#     (ie. data structures) that are constructed from</span></span>
+<span id="cb62-57"><a href="#cb62-57" aria-hidden="true" tabindex="-1"></a><span class="co">#     vectors, lists and attributes.</span></span>
+<span id="cb62-58"><a href="#cb62-58" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb62-59"><a href="#cb62-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-60"><a href="#cb62-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-61"><a href="#cb62-61" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>( <span class="at">student =</span> <span class="fu">c</span>(<span class="st">"joe"</span>, <span class="st">"sue"</span>, <span class="st">"anne"</span>),</span>
+<span id="cb62-62"><a href="#cb62-62" aria-hidden="true" tabindex="-1"></a>                 <span class="at">test1 =</span> <span class="fu">c</span>(<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>),</span>
+<span id="cb62-63"><a href="#cb62-63" aria-hidden="true" tabindex="-1"></a>                 <span class="at">tes2 =</span> <span class="fu">c</span>(<span class="dv">75</span>,<span class="dv">85</span>,<span class="dv">95</span>))</span>
+<span id="cb62-64"><a href="#cb62-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-65"><a href="#cb62-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-66"><a href="#cb62-66" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  student test1 tes2
 1     joe    70   75
 2     sue    80   85
 3    anne    90   95</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Review of mode vs class  (we covered this in the last file on matrices)</span></span>
-<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a><span class="co"># mode returns the name of the underlying basic type of a data structure.</span></span>
-<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_NUMERIC_VECTOR)   # "numeric"</span></span>
-<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_CHARACTER_VECTOR) # "character"</span></span>
-<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_LOGICAL_VECTOR)   # "logical"</span></span>
-<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_LIST)             # "list"</span></span>
-<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_MATRIX)    # "numeric" or "character" or "logical"</span></span>
-<span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_FACTOR)    # "numeric"</span></span>
-<span id="cb66-13"><a href="#cb66-13" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_DATAFRAME) # "list"</span></span>
-<span id="cb66-14"><a href="#cb66-14" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb66-15"><a href="#cb66-15" aria-hidden="true" tabindex="-1"></a><span class="co"># For a complex data structure (e.g. matrix, factor, dataframe)</span></span>
-<span id="cb66-16"><a href="#cb66-16" aria-hidden="true" tabindex="-1"></a><span class="co"># class returns the name of the more complex structure. </span></span>
-<span id="cb66-17"><a href="#cb66-17" aria-hidden="true" tabindex="-1"></a><span class="co"># For the basic data structures (i.e. vectors and lists) the class function </span></span>
-<span id="cb66-18"><a href="#cb66-18" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the same value as the mode function</span></span>
-<span id="cb66-19"><a href="#cb66-19" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb66-20"><a href="#cb66-20" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_NUMERIC_VECTOR)   # "numeric"</span></span>
-<span id="cb66-21"><a href="#cb66-21" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_CHARACTER_VECTOR) # "character"</span></span>
-<span id="cb66-22"><a href="#cb66-22" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_LOGICAL_VECTOR)   # "logical"</span></span>
-<span id="cb66-23"><a href="#cb66-23" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_LIST)             # "list"</span></span>
-<span id="cb66-24"><a href="#cb66-24" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb66-25"><a href="#cb66-25" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_MATRIX)    # "matrix" "array"</span></span>
-<span id="cb66-26"><a href="#cb66-26" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_FACTOR)    # "factor" or "ordered" "factor"</span></span>
-<span id="cb66-27"><a href="#cb66-27" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_DATAFRAME) # "data.frame"</span></span>
-<span id="cb66-28"><a href="#cb66-28" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb66-29"><a href="#cb66-29" aria-hidden="true" tabindex="-1"></a><span class="co"># If you attach a "class" attribute to any data, R will return the </span></span>
-<span id="cb66-30"><a href="#cb66-30" aria-hidden="true" tabindex="-1"></a><span class="co"># value of the "class" attribute as the result of the class function.</span></span>
-<span id="cb66-31"><a href="#cb66-31" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb66-32"><a href="#cb66-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-33"><a href="#cb66-33" aria-hidden="true" tabindex="-1"></a><span class="co">#...............</span></span>
-<span id="cb66-34"><a href="#cb66-34" aria-hidden="true" tabindex="-1"></a><span class="co"># some examples</span></span>
-<span id="cb66-35"><a href="#cb66-35" aria-hidden="true" tabindex="-1"></a><span class="co">#...............</span></span>
-<span id="cb66-36"><a href="#cb66-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb66-37"><a href="#cb66-37" aria-hidden="true" tabindex="-1"></a><span class="co"># matrix</span></span>
-<span id="cb66-38"><a href="#cb66-38" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>), <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span>
-<span id="cb66-39"><a href="#cb66-39" aria-hidden="true" tabindex="-1"></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb64-2"><a href="#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Review of mode vs class  (we covered this in the last file on matrices)</span></span>
+<span id="cb64-3"><a href="#cb64-3" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb64-4"><a href="#cb64-4" aria-hidden="true" tabindex="-1"></a><span class="co"># mode returns the name of the underlying basic type of a data structure.</span></span>
+<span id="cb64-5"><a href="#cb64-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb64-6"><a href="#cb64-6" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_NUMERIC_VECTOR)   # "numeric"</span></span>
+<span id="cb64-7"><a href="#cb64-7" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_CHARACTER_VECTOR) # "character"</span></span>
+<span id="cb64-8"><a href="#cb64-8" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_LOGICAL_VECTOR)   # "logical"</span></span>
+<span id="cb64-9"><a href="#cb64-9" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_LIST)             # "list"</span></span>
+<span id="cb64-10"><a href="#cb64-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb64-11"><a href="#cb64-11" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_MATRIX)    # "numeric" or "character" or "logical"</span></span>
+<span id="cb64-12"><a href="#cb64-12" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_FACTOR)    # "numeric"</span></span>
+<span id="cb64-13"><a href="#cb64-13" aria-hidden="true" tabindex="-1"></a><span class="co">#    mode(SOME_DATAFRAME) # "list"</span></span>
+<span id="cb64-14"><a href="#cb64-14" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb64-15"><a href="#cb64-15" aria-hidden="true" tabindex="-1"></a><span class="co"># For a complex data structure (e.g. matrix, factor, dataframe)</span></span>
+<span id="cb64-16"><a href="#cb64-16" aria-hidden="true" tabindex="-1"></a><span class="co"># class returns the name of the more complex structure. </span></span>
+<span id="cb64-17"><a href="#cb64-17" aria-hidden="true" tabindex="-1"></a><span class="co"># For the basic data structures (i.e. vectors and lists) the class function </span></span>
+<span id="cb64-18"><a href="#cb64-18" aria-hidden="true" tabindex="-1"></a><span class="co"># returns the same value as the mode function</span></span>
+<span id="cb64-19"><a href="#cb64-19" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb64-20"><a href="#cb64-20" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_NUMERIC_VECTOR)   # "numeric"</span></span>
+<span id="cb64-21"><a href="#cb64-21" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_CHARACTER_VECTOR) # "character"</span></span>
+<span id="cb64-22"><a href="#cb64-22" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_LOGICAL_VECTOR)   # "logical"</span></span>
+<span id="cb64-23"><a href="#cb64-23" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_LIST)             # "list"</span></span>
+<span id="cb64-24"><a href="#cb64-24" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb64-25"><a href="#cb64-25" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_MATRIX)    # "matrix" "array"</span></span>
+<span id="cb64-26"><a href="#cb64-26" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_FACTOR)    # "factor" or "ordered" "factor"</span></span>
+<span id="cb64-27"><a href="#cb64-27" aria-hidden="true" tabindex="-1"></a><span class="co">#    class(SOME_DATAFRAME) # "data.frame"</span></span>
+<span id="cb64-28"><a href="#cb64-28" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb64-29"><a href="#cb64-29" aria-hidden="true" tabindex="-1"></a><span class="co"># If you attach a "class" attribute to any data, R will return the </span></span>
+<span id="cb64-30"><a href="#cb64-30" aria-hidden="true" tabindex="-1"></a><span class="co"># value of the "class" attribute as the result of the class function.</span></span>
+<span id="cb64-31"><a href="#cb64-31" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb64-32"><a href="#cb64-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-33"><a href="#cb64-33" aria-hidden="true" tabindex="-1"></a><span class="co">#...............</span></span>
+<span id="cb64-34"><a href="#cb64-34" aria-hidden="true" tabindex="-1"></a><span class="co"># some examples</span></span>
+<span id="cb64-35"><a href="#cb64-35" aria-hidden="true" tabindex="-1"></a><span class="co">#...............</span></span>
+<span id="cb64-36"><a href="#cb64-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb64-37"><a href="#cb64-37" aria-hidden="true" tabindex="-1"></a><span class="co"># matrix</span></span>
+<span id="cb64-38"><a href="#cb64-38" aria-hidden="true" tabindex="-1"></a>mat <span class="ot">=</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>), <span class="at">nrow=</span><span class="dv">2</span>, <span class="at">ncol=</span><span class="dv">3</span>)</span>
+<span id="cb64-39"><a href="#cb64-39" aria-hidden="true" tabindex="-1"></a>mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     [,1] [,2] [,3]
 [1,]   10   30   50
 [2,]   20   40   60</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(mat)    <span class="co"># "numeric"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(mat)    <span class="co"># "numeric"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mat)   <span class="co"># "matrix"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(mat)   <span class="co"># "matrix"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "matrix" "array" </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># factor</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>favcolor <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"yellow"</span>))   </span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>favcolor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># factor</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>favcolor <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>, <span class="st">"blue"</span>, <span class="st">"yellow"</span>))   </span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>favcolor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] red    blue   red    red    blue   yellow
 Levels: blue red yellow</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(favcolor)   <span class="co"># "numeric"  (see below for why this is numeric)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(favcolor)   <span class="co"># "numeric"  (see below for why this is numeric)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(favcolor)  <span class="co"># "factor"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(favcolor)  <span class="co"># "factor"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ordered factor</span></span>
-<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a>year <span class="ot">=</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"se"</span>),</span>
-<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">ordered=</span><span class="cn">TRUE</span>,</span>
-<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"fr"</span>,<span class="st">"so"</span>,<span class="st">"ju"</span>,<span class="st">"se"</span>)) </span>
-<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ordered factor</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>year <span class="ot">=</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"se"</span>),</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">ordered=</span><span class="cn">TRUE</span>,</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"fr"</span>,<span class="st">"so"</span>,<span class="st">"ju"</span>,<span class="st">"se"</span>)) </span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] fr so fr so fr se
 Levels: fr &lt; so &lt; ju &lt; se</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(year)   <span class="co"># "numeric"             (see below for why this is numeric)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(year)   <span class="co"># "numeric"             (see below for why this is numeric)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "numeric"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(year)  <span class="co"># "ordered" "factor"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(year)  <span class="co"># "ordered" "factor"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "ordered" "factor" </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data.frame</span></span>
-<span id="cb84-2"><a href="#cb84-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">students=</span><span class="fu">c</span>(<span class="st">"joe"</span>,<span class="st">"sam"</span>,<span class="st">"sue"</span>),</span>
-<span id="cb84-3"><a href="#cb84-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">test1=</span><span class="fu">c</span>(<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>),</span>
-<span id="cb84-4"><a href="#cb84-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">test2=</span><span class="fu">c</span>(<span class="dv">75</span>,<span class="dv">85</span>,<span class="dv">95</span>),</span>
-<span id="cb84-5"><a href="#cb84-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">honors=</span><span class="fu">c</span>(<span class="cn">FALSE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>),</span>
-<span id="cb84-6"><a href="#cb84-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb84-7"><a href="#cb84-7" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="co"># data.frame</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">=</span> <span class="fu">data.frame</span>(<span class="at">students=</span><span class="fu">c</span>(<span class="st">"joe"</span>,<span class="st">"sam"</span>,<span class="st">"sue"</span>),</span>
+<span id="cb82-3"><a href="#cb82-3" aria-hidden="true" tabindex="-1"></a>                <span class="at">test1=</span><span class="fu">c</span>(<span class="dv">70</span>,<span class="dv">80</span>,<span class="dv">90</span>),</span>
+<span id="cb82-4"><a href="#cb82-4" aria-hidden="true" tabindex="-1"></a>                <span class="at">test2=</span><span class="fu">c</span>(<span class="dv">75</span>,<span class="dv">85</span>,<span class="dv">95</span>),</span>
+<span id="cb82-5"><a href="#cb82-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">honors=</span><span class="fu">c</span>(<span class="cn">FALSE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>),</span>
+<span id="cb82-6"><a href="#cb82-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb82-7"><a href="#cb82-7" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  students test1 test2 honors
 1      joe    70    75  FALSE
 2      sam    80    85  FALSE
 3      sue    90    95   TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(df)  <span class="co"># "list"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mode</span>(df)  <span class="co"># "list"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df) <span class="co"># "data.frame"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(df) <span class="co"># "data.frame"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Levels of a factor</span></span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   - stored as a "levels" attribute  </span></span>
-<span id="cb90-5"><a href="#cb90-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb90-6"><a href="#cb90-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   - attr(SOME_FACTOR, "levels")</span></span>
-<span id="cb90-7"><a href="#cb90-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb90-8"><a href="#cb90-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   - levels(SOME_FACTOR)   # shorthand for attr(SOME_FACTOR, "levels")</span></span>
-<span id="cb90-9"><a href="#cb90-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
-<span id="cb90-10"><a href="#cb90-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   - by default levels are stored in sorted order</span></span>
-<span id="cb90-11"><a href="#cb90-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     (alphabetic order, or numeric order depending on data)</span></span>
-<span id="cb90-12"><a href="#cb90-12" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
-<span id="cb90-13"><a href="#cb90-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-14"><a href="#cb90-14" aria-hidden="true" tabindex="-1"></a><span class="co"># The "levels" of a factor are stored in the "levels" attribute as a "character" vector</span></span>
-<span id="cb90-15"><a href="#cb90-15" aria-hidden="true" tabindex="-1"></a><span class="co"># EXAMPLES</span></span>
-<span id="cb90-16"><a href="#cb90-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb90-17"><a href="#cb90-17" aria-hidden="true" tabindex="-1"></a>favcolor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Levels of a factor</span></span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   - stored as a "levels" attribute  </span></span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   - attr(SOME_FACTOR, "levels")</span></span>
+<span id="cb88-7"><a href="#cb88-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb88-8"><a href="#cb88-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   - levels(SOME_FACTOR)   # shorthand for attr(SOME_FACTOR, "levels")</span></span>
+<span id="cb88-9"><a href="#cb88-9" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb88-10"><a href="#cb88-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   - by default levels are stored in sorted order</span></span>
+<span id="cb88-11"><a href="#cb88-11" aria-hidden="true" tabindex="-1"></a><span class="co">#     (alphabetic order, or numeric order depending on data)</span></span>
+<span id="cb88-12"><a href="#cb88-12" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
+<span id="cb88-13"><a href="#cb88-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-14"><a href="#cb88-14" aria-hidden="true" tabindex="-1"></a><span class="co"># The "levels" of a factor are stored in the "levels" attribute as a "character" vector</span></span>
+<span id="cb88-15"><a href="#cb88-15" aria-hidden="true" tabindex="-1"></a><span class="co"># EXAMPLES</span></span>
+<span id="cb88-16"><a href="#cb88-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-17"><a href="#cb88-17" aria-hidden="true" tabindex="-1"></a>favcolor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] red    blue   red    red    blue   yellow
 Levels: blue red yellow</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(favcolor)  <span class="co"># "blue" "red" "yellow" - in alphabetical order</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(favcolor)  <span class="co"># "blue" "red" "yellow" - in alphabetical order</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "blue"   "red"    "yellow"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] fr so fr so fr se
 Levels: fr &lt; so &lt; ju &lt; se</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(year)  <span class="co"># "fr" "se" "so" -  notice "ju" (i.e. junior) is missing, it wasn't in the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(year)  <span class="co"># "fr" "se" "so" -  notice "ju" (i.e. junior) is missing, it wasn't in the data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "fr" "so" "ju" "se"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(year) <span class="co"># "ju" is missing - order of levels is alphabetical</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(year) <span class="co"># "ju" is missing - order of levels is alphabetical</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>fr so ju se 
  3  2  0  1 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(year)    <span class="co"># "ju" is missing - order of levels is alphabetical</span></span>
-<span id="cb100-2"><a href="#cb100-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb100-3"><a href="#cb100-3" aria-hidden="true" tabindex="-1"></a>education</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(year)    <span class="co"># "ju" is missing - order of levels is alphabetical</span></span>
+<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a>education</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2 4 4 1 5 4
 Levels: 1 &lt; 2 &lt; 3 &lt; 4 &lt; 5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(education)  <span class="co"># in numeric order, notice 3 is missing </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(education)  <span class="co"># in numeric order, notice 3 is missing </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1" "2" "3" "4" "5"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(education) <span class="co"># "3" is missing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(education) <span class="co"># "3" is missing</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 2 3 4 5 
 1 1 0 3 1 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(education)    <span class="co"># "3" is missing</span></span>
-<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">100</span>,<span class="dv">2</span>))   <span class="co"># numeric data</span></span>
-<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span> (x)             <span class="co"># "2" "100" - in numeric order, even though levels is a character vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(education)    <span class="co"># "3" is missing</span></span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb104-3"><a href="#cb104-3" aria-hidden="true" tabindex="-1"></a>x <span class="ot">=</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">100</span>,<span class="dv">2</span>))   <span class="co"># numeric data</span></span>
+<span id="cb104-4"><a href="#cb104-4" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span> (x)             <span class="co"># "2" "100" - in numeric order, even though levels is a character vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2"   "100"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
-<span id="cb108-2"><a href="#cb108-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting the levels explicitly</span></span>
-<span id="cb108-3"><a href="#cb108-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb108-4"><a href="#cb108-4" aria-hidden="true" tabindex="-1"></a><span class="co">#    If your data is missing some values or</span></span>
-<span id="cb108-5"><a href="#cb108-5" aria-hidden="true" tabindex="-1"></a><span class="co">#    if you want the levels to be in a specific order you can explicitly specify a </span></span>
-<span id="cb108-6"><a href="#cb108-6" aria-hidden="true" tabindex="-1"></a><span class="co">#    vector for the levels when you create the factor.</span></span>
-<span id="cb108-7"><a href="#cb108-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb108-8"><a href="#cb108-8" aria-hidden="true" tabindex="-1"></a><span class="co">#       factor ( ... levels = SOME_VECTOR ...)</span></span>
-<span id="cb108-9"><a href="#cb108-9" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
-<span id="cb108-10"><a href="#cb108-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb108-11"><a href="#cb108-11" aria-hidden="true" tabindex="-1"></a><span class="co"># remember that for year, there were no juniors so "ju" didn't appear</span></span>
-<span id="cb108-12"><a href="#cb108-12" aria-hidden="true" tabindex="-1"></a><span class="co"># in either the summary or in the plot.</span></span>
-<span id="cb108-13"><a href="#cb108-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb108-14"><a href="#cb108-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Also the years are not in the correct order </span></span>
-<span id="cb108-15"><a href="#cb108-15" aria-hidden="true" tabindex="-1"></a><span class="co"># notice that "se" (i.e. senior) is before "so" (i.e. sophomore)</span></span>
-<span id="cb108-16"><a href="#cb108-16" aria-hidden="true" tabindex="-1"></a><span class="co"># the order should be "fr" "so" "ju" "se"</span></span>
-<span id="cb108-17"><a href="#cb108-17" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Setting the levels explicitly</span></span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="co">#    If your data is missing some values or</span></span>
+<span id="cb106-5"><a href="#cb106-5" aria-hidden="true" tabindex="-1"></a><span class="co">#    if you want the levels to be in a specific order you can explicitly specify a </span></span>
+<span id="cb106-6"><a href="#cb106-6" aria-hidden="true" tabindex="-1"></a><span class="co">#    vector for the levels when you create the factor.</span></span>
+<span id="cb106-7"><a href="#cb106-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb106-8"><a href="#cb106-8" aria-hidden="true" tabindex="-1"></a><span class="co">#       factor ( ... levels = SOME_VECTOR ...)</span></span>
+<span id="cb106-9"><a href="#cb106-9" aria-hidden="true" tabindex="-1"></a><span class="co">#--------------------------------------------------------------------------</span></span>
+<span id="cb106-10"><a href="#cb106-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-11"><a href="#cb106-11" aria-hidden="true" tabindex="-1"></a><span class="co"># remember that for year, there were no juniors so "ju" didn't appear</span></span>
+<span id="cb106-12"><a href="#cb106-12" aria-hidden="true" tabindex="-1"></a><span class="co"># in either the summary or in the plot.</span></span>
+<span id="cb106-13"><a href="#cb106-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb106-14"><a href="#cb106-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Also the years are not in the correct order </span></span>
+<span id="cb106-15"><a href="#cb106-15" aria-hidden="true" tabindex="-1"></a><span class="co"># notice that "se" (i.e. senior) is before "so" (i.e. sophomore)</span></span>
+<span id="cb106-16"><a href="#cb106-16" aria-hidden="true" tabindex="-1"></a><span class="co"># the order should be "fr" "so" "ju" "se"</span></span>
+<span id="cb106-17"><a href="#cb106-17" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] fr so fr so fr se
 Levels: fr &lt; so &lt; ju &lt; se</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>fr so ju se 
  3  2  0  1 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(year)</span>
-<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreate the year variable to ensure that ALL "levels" are included</span></span>
-<span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and that order of levels is as desired.</span></span>
-<span id="cb112-5"><a href="#cb112-5" aria-hidden="true" tabindex="-1"></a>year <span class="ot">&lt;-</span>     <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"se"</span>),</span>
-<span id="cb112-6"><a href="#cb112-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"fr"</span>,<span class="st">"so"</span>,<span class="st">"ju"</span>,<span class="st">"se"</span>))              <span class="co"># ordinal data (use a factor in R)</span></span>
-<span id="cb112-7"><a href="#cb112-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb112-8"><a href="#cb112-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(year)   <span class="co"># now data is in order and ju shows a zero total</span></span>
-<span id="cb112-9"><a href="#cb112-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(year)   <span class="co"># now data is in order and ju shows a zero total</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(year)</span>
+<span id="cb110-2"><a href="#cb110-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb110-3"><a href="#cb110-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Recreate the year variable to ensure that ALL "levels" are included</span></span>
+<span id="cb110-4"><a href="#cb110-4" aria-hidden="true" tabindex="-1"></a><span class="co"># and that order of levels is as desired.</span></span>
+<span id="cb110-5"><a href="#cb110-5" aria-hidden="true" tabindex="-1"></a>year <span class="ot">&lt;-</span>     <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"so"</span>, <span class="st">"fr"</span>, <span class="st">"se"</span>),</span>
+<span id="cb110-6"><a href="#cb110-6" aria-hidden="true" tabindex="-1"></a>                   <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"fr"</span>,<span class="st">"so"</span>,<span class="st">"ju"</span>,<span class="st">"se"</span>))              <span class="co"># ordinal data (use a factor in R)</span></span>
+<span id="cb110-7"><a href="#cb110-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb110-8"><a href="#cb110-8" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(year)   <span class="co"># now data is in order and ju shows a zero total</span></span>
+<span id="cb110-9"><a href="#cb110-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(year)   <span class="co"># now data is in order and ju shows a zero total</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>fr so ju se 
  3  2  0  1 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a>education <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>( <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>), </span>
-<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>))         <span class="co"># nominal data (use a factor in R)</span></span>
-<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a><span class="co"># similar approach for education</span></span>
-<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(education)</span>
-<span id="cb114-6"><a href="#cb114-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1" aria-hidden="true" tabindex="-1"></a>education <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>( <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">4</span>), </span>
+<span id="cb112-2"><a href="#cb112-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">levels=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>))         <span class="co"># nominal data (use a factor in R)</span></span>
+<span id="cb112-3"><a href="#cb112-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb112-4"><a href="#cb112-4" aria-hidden="true" tabindex="-1"></a><span class="co"># similar approach for education</span></span>
+<span id="cb112-5"><a href="#cb112-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(education)</span>
+<span id="cb112-6"><a href="#cb112-6" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>1 2 3 4 5 
 1 1 0 3 1 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A factor ...</span></span>
-<span id="cb116-2"><a href="#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  1. ... is a "numeric" vector (yes "numeric" not "character" - keep reading)</span></span>
-<span id="cb116-3"><a href="#cb116-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  2. ... has a "class" attribute with a value of "factor"</span></span>
-<span id="cb116-4"><a href="#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="co">#  3. ... has a "levels" attribute that is a character vector with the names</span></span>
-<span id="cb116-5"><a href="#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="co">#         of the levels with a value of "factor"</span></span>
-<span id="cb116-6"><a href="#cb116-6" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A factor ...</span></span>
+<span id="cb114-2"><a href="#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  1. ... is a "numeric" vector (yes "numeric" not "character" - keep reading)</span></span>
+<span id="cb114-3"><a href="#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="co">#  2. ... has a "class" attribute with a value of "factor"</span></span>
+<span id="cb114-4"><a href="#cb114-4" aria-hidden="true" tabindex="-1"></a><span class="co">#  3. ... has a "levels" attribute that is a character vector with the names</span></span>
+<span id="cb114-5"><a href="#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="co">#         of the levels with a value of "factor"</span></span>
+<span id="cb114-6"><a href="#cb114-6" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] fr so fr so fr se
 Levels: fr so ju se</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "fr" "so" "ju" "se"
@@ -1307,16 +1312,16 @@ Levels: fr so ju se</code></pre>
 $class
 [1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a>education</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1" aria-hidden="true" tabindex="-1"></a>education</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2 4 4 1 5 4
 Levels: 1 2 3 4 5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(education)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "1" "2" "3" "4" "5"
@@ -1324,80 +1329,80 @@ Levels: 1 2 3 4 5</code></pre>
 $class
 [1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn year into a character vector</span></span>
-<span id="cb128-2"><a href="#cb128-2" aria-hidden="true" tabindex="-1"></a>charYear <span class="ot">&lt;-</span> <span class="fu">as.character</span>(year)</span>
-<span id="cb128-3"><a href="#cb128-3" aria-hidden="true" tabindex="-1"></a>charYear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb126"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb126-1"><a href="#cb126-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn year into a character vector</span></span>
+<span id="cb126-2"><a href="#cb126-2" aria-hidden="true" tabindex="-1"></a>charYear <span class="ot">&lt;-</span> <span class="fu">as.character</span>(year)</span>
+<span id="cb126-3"><a href="#cb126-3" aria-hidden="true" tabindex="-1"></a>charYear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "fr" "so" "fr" "so" "fr" "se"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb128"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb128-1"><a href="#cb128-1" aria-hidden="true" tabindex="-1"></a>year</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] fr so fr so fr se
 Levels: fr so ju se</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(charYear)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(charYear)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn a character vector into a factor with the factor function</span></span>
-<span id="cb136-2"><a href="#cb136-2" aria-hidden="true" tabindex="-1"></a>charYear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Turn a character vector into a factor with the factor function</span></span>
+<span id="cb134-2"><a href="#cb134-2" aria-hidden="true" tabindex="-1"></a>charYear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "fr" "so" "fr" "so" "fr" "se"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a>facYear <span class="ot">&lt;-</span> <span class="fu">factor</span>(charYear, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"fr"</span>,<span class="st">"so"</span>,<span class="st">"ju"</span>,<span class="st">"se"</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
-<span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a>facYear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1" aria-hidden="true" tabindex="-1"></a>facYear <span class="ot">&lt;-</span> <span class="fu">factor</span>(charYear, <span class="at">levels=</span><span class="fu">c</span>(<span class="st">"fr"</span>,<span class="st">"so"</span>,<span class="st">"ju"</span>,<span class="st">"se"</span>), <span class="at">ordered=</span><span class="cn">TRUE</span>)</span>
+<span id="cb136-2"><a href="#cb136-2" aria-hidden="true" tabindex="-1"></a>facYear</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] fr so fr so fr se
 Levels: fr &lt; so &lt; ju &lt; se</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb140-2"><a href="#cb140-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A factor is actually a "numeric" vector!!!  (yes, numeric, not character)</span></span>
-<span id="cb140-3"><a href="#cb140-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb140-4"><a href="#cb140-4" aria-hidden="true" tabindex="-1"></a><span class="co"># R stores the data for a factor in a numeric vector as it is often more </span></span>
-<span id="cb140-5"><a href="#cb140-5" aria-hidden="true" tabindex="-1"></a><span class="co"># efficient for the computer to process numbers than it is to process</span></span>
-<span id="cb140-6"><a href="#cb140-6" aria-hidden="true" tabindex="-1"></a><span class="co"># character data.</span></span>
-<span id="cb140-7"><a href="#cb140-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb140-8"><a href="#cb140-8" aria-hidden="true" tabindex="-1"></a><span class="co"># See below for details ...</span></span>
-<span id="cb140-9"><a href="#cb140-9" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb140-10"><a href="#cb140-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb140-11"><a href="#cb140-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())   <span class="co"># start over </span></span>
-<span id="cb140-12"><a href="#cb140-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb140-13"><a href="#cb140-13" aria-hidden="true" tabindex="-1"></a><span class="co"># when R creates a factor it does the following:</span></span>
-<span id="cb140-14"><a href="#cb140-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  It uses the numbers 1,2,3, etc.</span></span>
-<span id="cb140-15"><a href="#cb140-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  to represent the first,second,third, etc levels</span></span>
-<span id="cb140-16"><a href="#cb140-16" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb140-17"><a href="#cb140-17" aria-hidden="true" tabindex="-1"></a><span class="co">#  R stores this data in a numeric vector and stores the names</span></span>
-<span id="cb140-18"><a href="#cb140-18" aria-hidden="true" tabindex="-1"></a><span class="co">#  of the levels in the levels attributes</span></span>
-<span id="cb140-19"><a href="#cb140-19" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb140-20"><a href="#cb140-20" aria-hidden="true" tabindex="-1"></a><span class="co">#  R creates a class attribute with the value of "factor"</span></span>
-<span id="cb140-21"><a href="#cb140-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb140-22"><a href="#cb140-22" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>))</span>
-<span id="cb140-23"><a href="#cb140-23" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb138-2"><a href="#cb138-2" aria-hidden="true" tabindex="-1"></a><span class="co"># A factor is actually a "numeric" vector!!!  (yes, numeric, not character)</span></span>
+<span id="cb138-3"><a href="#cb138-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb138-4"><a href="#cb138-4" aria-hidden="true" tabindex="-1"></a><span class="co"># R stores the data for a factor in a numeric vector as it is often more </span></span>
+<span id="cb138-5"><a href="#cb138-5" aria-hidden="true" tabindex="-1"></a><span class="co"># efficient for the computer to process numbers than it is to process</span></span>
+<span id="cb138-6"><a href="#cb138-6" aria-hidden="true" tabindex="-1"></a><span class="co"># character data.</span></span>
+<span id="cb138-7"><a href="#cb138-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb138-8"><a href="#cb138-8" aria-hidden="true" tabindex="-1"></a><span class="co"># See below for details ...</span></span>
+<span id="cb138-9"><a href="#cb138-9" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb138-10"><a href="#cb138-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-11"><a href="#cb138-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())   <span class="co"># start over </span></span>
+<span id="cb138-12"><a href="#cb138-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-13"><a href="#cb138-13" aria-hidden="true" tabindex="-1"></a><span class="co"># when R creates a factor it does the following:</span></span>
+<span id="cb138-14"><a href="#cb138-14" aria-hidden="true" tabindex="-1"></a><span class="co">#  It uses the numbers 1,2,3, etc.</span></span>
+<span id="cb138-15"><a href="#cb138-15" aria-hidden="true" tabindex="-1"></a><span class="co">#  to represent the first,second,third, etc levels</span></span>
+<span id="cb138-16"><a href="#cb138-16" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb138-17"><a href="#cb138-17" aria-hidden="true" tabindex="-1"></a><span class="co">#  R stores this data in a numeric vector and stores the names</span></span>
+<span id="cb138-18"><a href="#cb138-18" aria-hidden="true" tabindex="-1"></a><span class="co">#  of the levels in the levels attributes</span></span>
+<span id="cb138-19"><a href="#cb138-19" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb138-20"><a href="#cb138-20" aria-hidden="true" tabindex="-1"></a><span class="co">#  R creates a class attribute with the value of "factor"</span></span>
+<span id="cb138-21"><a href="#cb138-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb138-22"><a href="#cb138-22" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>))</span>
+<span id="cb138-23"><a href="#cb138-23" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] violet red    green  red    green  violet red    red   
 Levels: green red violet</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(colors)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(colors)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(colors) <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(colors) <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(colors)   <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(colors)   <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)  <span class="co"># all of the attributes -i.e. class and levels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)  <span class="co"># all of the attributes -i.e. class and levels</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "green"  "red"    "violet"
@@ -1405,97 +1410,97 @@ Levels: green red violet</code></pre>
 $class
 [1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb150"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To see the actual data you can remove the class attribute</span></span>
-<span id="cb150-2"><a href="#cb150-2" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(colors, <span class="st">"class"</span>) <span class="ot">=</span> <span class="cn">NULL</span>  <span class="co"># this also works: class(colors) = NULL    </span></span>
-<span id="cb150-3"><a href="#cb150-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb150-4"><a href="#cb150-4" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)   <span class="co"># class is gone</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="co"># To see the actual data you can remove the class attribute</span></span>
+<span id="cb148-2"><a href="#cb148-2" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(colors, <span class="st">"class"</span>) <span class="ot">=</span> <span class="cn">NULL</span>  <span class="co"># this also works: class(colors) = NULL    </span></span>
+<span id="cb148-3"><a href="#cb148-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb148-4"><a href="#cb148-4" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)   <span class="co"># class is gone</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "green"  "red"    "violet"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Since we removed the class attribute, </span></span>
-<span id="cb152-2"><a href="#cb152-2" aria-hidden="true" tabindex="-1"></a><span class="co"># colors is no longer a factor - it is just a "numeric" vector (yes, "numeric" - keep reading)</span></span>
-<span id="cb152-3"><a href="#cb152-3" aria-hidden="true" tabindex="-1"></a><span class="co"># that has some attributes.</span></span>
-<span id="cb152-4"><a href="#cb152-4" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb150"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb150-1"><a href="#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Since we removed the class attribute, </span></span>
+<span id="cb150-2"><a href="#cb150-2" aria-hidden="true" tabindex="-1"></a><span class="co"># colors is no longer a factor - it is just a "numeric" vector (yes, "numeric" - keep reading)</span></span>
+<span id="cb150-3"><a href="#cb150-3" aria-hidden="true" tabindex="-1"></a><span class="co"># that has some attributes.</span></span>
+<span id="cb150-4"><a href="#cb150-4" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 2 1 2 1 3 2 2
 attr(,"levels")
 [1] "green"  "red"    "violet"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(colors)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(colors)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb156"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(colors) <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb154"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb154-1"><a href="#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(colors) <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb158"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(colors)   <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb156"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(colors)   <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb160"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb160-1"><a href="#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------------------------</span></span>
-<span id="cb160-2"><a href="#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="co"># unclass( SOME_OBJECT )</span></span>
-<span id="cb160-3"><a href="#cb160-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   - returns SOME_OBJECT but without the class attribute</span></span>
-<span id="cb160-4"><a href="#cb160-4" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------------------------</span></span>
-<span id="cb160-5"><a href="#cb160-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())   <span class="co"># start over </span></span>
-<span id="cb160-6"><a href="#cb160-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb160-7"><a href="#cb160-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create a factor</span></span>
-<span id="cb160-8"><a href="#cb160-8" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>))</span>
-<span id="cb160-9"><a href="#cb160-9" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb158"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb158-1"><a href="#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------------------------</span></span>
+<span id="cb158-2"><a href="#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="co"># unclass( SOME_OBJECT )</span></span>
+<span id="cb158-3"><a href="#cb158-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   - returns SOME_OBJECT but without the class attribute</span></span>
+<span id="cb158-4"><a href="#cb158-4" aria-hidden="true" tabindex="-1"></a><span class="co">#----------------------------------------------------------------------------</span></span>
+<span id="cb158-5"><a href="#cb158-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())   <span class="co"># start over </span></span>
+<span id="cb158-6"><a href="#cb158-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb158-7"><a href="#cb158-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create a factor</span></span>
+<span id="cb158-8"><a href="#cb158-8" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>))</span>
+<span id="cb158-9"><a href="#cb158-9" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] violet red    green  red    green  violet red    red   
 Levels: green red violet</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb162"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a href="#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="co"># unclass(colors) returns colors without the class attribute</span></span>
-<span id="cb162-2"><a href="#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unclass</span>(colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb160"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb160-1"><a href="#cb160-1" aria-hidden="true" tabindex="-1"></a><span class="co"># unclass(colors) returns colors without the class attribute</span></span>
+<span id="cb160-2"><a href="#cb160-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unclass</span>(colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 2 1 2 1 3 2 2
 attr(,"levels")
 [1] "green"  "red"    "violet"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb164"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the original variable didn't change</span></span>
-<span id="cb164-2"><a href="#cb164-2" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb162"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb162-1"><a href="#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the original variable didn't change</span></span>
+<span id="cb162-2"><a href="#cb162-2" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] violet red    green  red    green  violet red    red   
 Levels: green red violet</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb166"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="co"># REMEMBER - if you want to change the original variable, you must assign to it!</span></span>
-<span id="cb166-2"><a href="#cb166-2" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">=</span> <span class="fu">unclass</span>(colors)</span>
-<span id="cb166-3"><a href="#cb166-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb166-4"><a href="#cb166-4" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb164"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb164-1"><a href="#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="co"># REMEMBER - if you want to change the original variable, you must assign to it!</span></span>
+<span id="cb164-2"><a href="#cb164-2" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">=</span> <span class="fu">unclass</span>(colors)</span>
+<span id="cb164-3"><a href="#cb164-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb164-4"><a href="#cb164-4" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 2 1 2 1 3 2 2
 attr(,"levels")
 [1] "green"  "red"    "violet"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb168"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(colors)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb166"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb166-1"><a href="#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(colors)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb170"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb170-1"><a href="#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(colors) <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb168"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb168-1"><a href="#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(colors) <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb172"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb172-2"><a href="#cb172-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">WARNING</span><span class="co">: as.numeric will convert a factor into the underlying numeric</span></span>
-<span id="cb172-3"><a href="#cb172-3" aria-hidden="true" tabindex="-1"></a><span class="co">#          values of the levels</span></span>
-<span id="cb172-4"><a href="#cb172-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb172-5"><a href="#cb172-5" aria-hidden="true" tabindex="-1"></a><span class="co">#          Data whose value is equal to the 1st "level" is recorded as 1</span></span>
-<span id="cb172-6"><a href="#cb172-6" aria-hidden="true" tabindex="-1"></a><span class="co">#          Data whose value is equal to the 2nd "level" is recorded as 2</span></span>
-<span id="cb172-7"><a href="#cb172-7" aria-hidden="true" tabindex="-1"></a><span class="co">#          etc.</span></span>
-<span id="cb172-8"><a href="#cb172-8" aria-hidden="true" tabindex="-1"></a><span class="co">#          (see example below)</span></span>
-<span id="cb172-9"><a href="#cb172-9" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
-<span id="cb172-10"><a href="#cb172-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb172-11"><a href="#cb172-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())   <span class="co"># start over </span></span>
-<span id="cb172-12"><a href="#cb172-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb172-13"><a href="#cb172-13" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>))</span>
-<span id="cb172-14"><a href="#cb172-14" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb170"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb170-1"><a href="#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb170-2"><a href="#cb170-2" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">WARNING</span><span class="co">: as.numeric will convert a factor into the underlying numeric</span></span>
+<span id="cb170-3"><a href="#cb170-3" aria-hidden="true" tabindex="-1"></a><span class="co">#          values of the levels</span></span>
+<span id="cb170-4"><a href="#cb170-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb170-5"><a href="#cb170-5" aria-hidden="true" tabindex="-1"></a><span class="co">#          Data whose value is equal to the 1st "level" is recorded as 1</span></span>
+<span id="cb170-6"><a href="#cb170-6" aria-hidden="true" tabindex="-1"></a><span class="co">#          Data whose value is equal to the 2nd "level" is recorded as 2</span></span>
+<span id="cb170-7"><a href="#cb170-7" aria-hidden="true" tabindex="-1"></a><span class="co">#          etc.</span></span>
+<span id="cb170-8"><a href="#cb170-8" aria-hidden="true" tabindex="-1"></a><span class="co">#          (see example below)</span></span>
+<span id="cb170-9"><a href="#cb170-9" aria-hidden="true" tabindex="-1"></a><span class="co">#-------------------------------------------------------------------------</span></span>
+<span id="cb170-10"><a href="#cb170-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-11"><a href="#cb170-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())   <span class="co"># start over </span></span>
+<span id="cb170-12"><a href="#cb170-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-13"><a href="#cb170-13" aria-hidden="true" tabindex="-1"></a>colors <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"red"</span>, <span class="st">"green"</span>, <span class="st">"violet"</span>, <span class="st">"red"</span>, <span class="st">"red"</span>))</span>
+<span id="cb170-14"><a href="#cb170-14" aria-hidden="true" tabindex="-1"></a>colors</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] violet red    green  red    green  violet red    red   
 Levels: green red violet</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb174"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb174-1"><a href="#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb172"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "green"  "red"    "violet"
@@ -1503,46 +1508,46 @@ Levels: green red violet</code></pre>
 $class
 [1] "factor"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb176"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(colors)   <span class="co"># 3 2 1 2 1 3 2 2   (just the numeric values - 1st level is 1, 2nd level is 2, etc)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb174"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb174-1"><a href="#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(colors)   <span class="co"># 3 2 1 2 1 3 2 2   (just the numeric values - 1st level is 1, 2nd level is 2, etc)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 2 1 2 1 3 2 2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb178"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb178-1"><a href="#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="co"># REMOVE THE class attribute - the data will no longer be a factor</span></span>
-<span id="cb178-2"><a href="#cb178-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You will see the underlying numeric values of the data.</span></span>
-<span id="cb178-3"><a href="#cb178-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb178-4"><a href="#cb178-4" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(colors, <span class="st">"class"</span>) <span class="ot">&lt;-</span> <span class="cn">NULL</span>   <span class="co"># remove the class attribute</span></span>
-<span id="cb178-5"><a href="#cb178-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb178-6"><a href="#cb178-6" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb176"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># REMOVE THE class attribute - the data will no longer be a factor</span></span>
+<span id="cb176-2"><a href="#cb176-2" aria-hidden="true" tabindex="-1"></a><span class="co"># You will see the underlying numeric values of the data.</span></span>
+<span id="cb176-3"><a href="#cb176-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb176-4"><a href="#cb176-4" aria-hidden="true" tabindex="-1"></a><span class="fu">attr</span>(colors, <span class="st">"class"</span>) <span class="ot">&lt;-</span> <span class="cn">NULL</span>   <span class="co"># remove the class attribute</span></span>
+<span id="cb176-5"><a href="#cb176-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb176-6"><a href="#cb176-6" aria-hidden="true" tabindex="-1"></a><span class="fu">attributes</span>(colors)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$levels
 [1] "green"  "red"    "violet"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb180"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb180-1"><a href="#cb180-1" aria-hidden="true" tabindex="-1"></a>colors <span class="co"># display the underlying data without the special treatment of being a factor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb178"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb178-1"><a href="#cb178-1" aria-hidden="true" tabindex="-1"></a>colors <span class="co"># display the underlying data without the special treatment of being a factor</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 2 1 2 1 3 2 2
 attr(,"levels")
 [1] "green"  "red"    "violet"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb182"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb182-1"><a href="#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">WARNING</span><span class="co"> ...</span></span>
-<span id="cb182-2"><a href="#cb182-2" aria-hidden="true" tabindex="-1"></a><span class="co"># as.numeric will not work as you expect in this example:</span></span>
-<span id="cb182-3"><a href="#cb182-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb182-4"><a href="#cb182-4" aria-hidden="true" tabindex="-1"></a>areaCodes <span class="ot">=</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">718</span>, <span class="dv">212</span>, <span class="dv">212</span>, <span class="dv">718</span>, <span class="dv">516</span>))</span>
-<span id="cb182-5"><a href="#cb182-5" aria-hidden="true" tabindex="-1"></a>areaCodes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb180"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb180-1"><a href="#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">WARNING</span><span class="co"> ...</span></span>
+<span id="cb180-2"><a href="#cb180-2" aria-hidden="true" tabindex="-1"></a><span class="co"># as.numeric will not work as you expect in this example:</span></span>
+<span id="cb180-3"><a href="#cb180-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb180-4"><a href="#cb180-4" aria-hidden="true" tabindex="-1"></a>areaCodes <span class="ot">=</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="dv">718</span>, <span class="dv">212</span>, <span class="dv">212</span>, <span class="dv">718</span>, <span class="dv">516</span>))</span>
+<span id="cb180-5"><a href="#cb180-5" aria-hidden="true" tabindex="-1"></a>areaCodes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 718 212 212 718 516
 Levels: 212 516 718</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb184"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb184-1"><a href="#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(areaCodes) <span class="co"># 3 1 1 3 2   ... not what you'd expect</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb182"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb182-1"><a href="#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(areaCodes) <span class="co"># 3 1 1 3 2   ... not what you'd expect</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 1 1 3 2</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb186"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb186-1"><a href="#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(areaCodes) <span class="co"># "718" "212" "212" "718" "516"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb184"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb184-1"><a href="#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(areaCodes) <span class="co"># "718" "212" "212" "718" "516"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "718" "212" "212" "718" "516"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb188"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb188-1"><a href="#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You can solve the probalem in the following way:</span></span>
-<span id="cb188-2"><a href="#cb188-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb188-3"><a href="#cb188-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">as.character</span>(areaCodes)) <span class="co"># 718 212 212 718 516</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb186"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb186-1"><a href="#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You can solve the probalem in the following way:</span></span>
+<span id="cb186-2"><a href="#cb186-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb186-3"><a href="#cb186-3" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(<span class="fu">as.character</span>(areaCodes)) <span class="co"># 718 212 212 718 516</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 718 212 212 718 516</code></pre>
 </div>

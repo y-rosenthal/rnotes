@@ -228,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12a. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-b. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -660,46 +660,46 @@ click here for answer
 <span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          fruit price
-1         apple  2.54
-2       apricot  4.25
-3       avocado  5.45
-4        banana  6.08
-5   bell pepper  5.04
-6      bilberry  5.24
-7    blackberry  4.45
-8  blackcurrant  1.50
-9  blood orange  5.38
-10    blueberry  2.38
-11  boysenberry  6.94
-12   breadfruit  5.89
-13 canary melon  3.16
-14   cantaloupe  6.54
-15    cherimoya  1.38
-16       cherry  4.93
-17 chili pepper  5.47
-18   clementine  2.46
-19   cloudberry  5.17
-20      coconut  3.88
-21    cranberry  4.21
-22     cucumber  3.03
-23      currant  1.75
-24       damson  3.84
-25         date  6.14
-26  dragonfruit  2.08
-27       durian  6.54
-28     eggplant  5.20
-29   elderberry  2.17
-30       feijoa  5.81
-31          fig  5.77
-32   goji berry  2.83
-33   gooseberry  6.10
-34        grape  3.99
-35   grapefruit  5.65
-36        guava  5.20
-37     honeydew  2.62
-38  huckleberry  1.31
-39    jackfruit  6.41
-40   kiwi fruit  4.53</code></pre>
+1         apple  2.90
+2       apricot  4.97
+3       avocado  3.64
+4        banana  2.18
+5   bell pepper  4.67
+6      bilberry  5.96
+7    blackberry  6.96
+8  blackcurrant  4.16
+9  blood orange  3.38
+10    blueberry  1.39
+11  boysenberry  3.49
+12   breadfruit  5.67
+13 canary melon  4.71
+14   cantaloupe  4.53
+15    cherimoya  3.91
+16       cherry  4.12
+17 chili pepper  2.34
+18   clementine  2.49
+19   cloudberry  5.91
+20      coconut  5.65
+21    cranberry  2.62
+22     cucumber  5.28
+23      currant  6.88
+24       damson  6.00
+25         date  1.16
+26  dragonfruit  2.03
+27       durian  6.27
+28     eggplant  3.72
+29   elderberry  3.23
+30       feijoa  3.27
+31          fig  4.81
+32   goji berry  2.62
+33   gooseberry  2.83
+34        grape  2.09
+35   grapefruit  6.63
+36        guava  4.74
+37     honeydew  1.46
+38  huckleberry  6.71
+39    jackfruit  4.21
+40   kiwi fruit  6.02</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show just the las 5% of the rows</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -709,8 +709,8 @@ click here for answer
 <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(df, .<span class="dv">05</span> <span class="sc">*</span> <span class="fu">nrow</span>(df))    <span class="co"># BEST ANSWER</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        fruit price
-39  jackfruit  6.41
-40 kiwi fruit  4.53</code></pre>
+39  jackfruit  4.21
+40 kiwi fruit  6.02</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="do">##############################################################.</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Another answer - don't forget the last comma (see below)</span></span>
@@ -719,8 +719,8 @@ click here for answer
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>df[ rowNumbers <span class="sc">&gt;</span> .<span class="dv">95</span><span class="sc">*</span><span class="fu">nrow</span>(df) ,  ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>        fruit price
-39  jackfruit  6.41
-40 kiwi fruit  4.53</code></pre>
+39  jackfruit  4.21
+40 kiwi fruit  6.02</code></pre>
 </div>
 </div>
 </div>

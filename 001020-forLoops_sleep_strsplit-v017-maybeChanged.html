@@ -228,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title"><yrchapternumber>12a. </yrchapternumber> Indexing with logicals, e.g. someVector [ c(TRUE, FALSE, TRUE) ]</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_b-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-a. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title"><yrchapternumber>12b. </yrchapternumber> Automatic (or "implicit") conversions - numeric to logical - logical to numeric</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12-b. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -2617,22 +2617,22 @@ click here for the answer - part b - for loop
 <span id="cb170-6"><a href="#cb170-6" aria-hidden="true" tabindex="-1"></a><span class="co"># character vector into multiple values.</span></span>
 <span id="cb170-7"><a href="#cb170-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb170-8"><a href="#cb170-8" aria-hidden="true" tabindex="-1"></a><span class="co"># IMPORTANT: The return value of strsplit is a LIST.</span></span>
-<span id="cb170-9"><a href="#cb170-9" aria-hidden="true" tabindex="-1"></a>?strsplit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>starting httpd help server ... done</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb172"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="co"># multiple values in the original vector</span></span>
-<span id="cb172-2"><a href="#cb172-2" aria-hidden="true" tabindex="-1"></a>people <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Cohen,Sam"</span>,<span class="st">"Jones,Bob"</span>,<span class="st">"Andrews,Claire"</span>)</span>
-<span id="cb172-3"><a href="#cb172-3" aria-hidden="true" tabindex="-1"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb170-9"><a href="#cb170-9" aria-hidden="true" tabindex="-1"></a><span class="co"># View the help page by typing: </span></span>
+<span id="cb170-10"><a href="#cb170-10" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb170-11"><a href="#cb170-11" aria-hidden="true" tabindex="-1"></a><span class="co">#    ?strsplit</span></span>
+<span id="cb170-12"><a href="#cb170-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb170-13"><a href="#cb170-13" aria-hidden="true" tabindex="-1"></a><span class="co"># multiple values in the original vector</span></span>
+<span id="cb170-14"><a href="#cb170-14" aria-hidden="true" tabindex="-1"></a>people <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"Cohen,Sam"</span>,<span class="st">"Jones,Bob"</span>,<span class="st">"Andrews,Claire"</span>)</span>
+<span id="cb170-15"><a href="#cb170-15" aria-hidden="true" tabindex="-1"></a>people</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Cohen,Sam"      "Jones,Bob"      "Andrews,Claire"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb174"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb174-1"><a href="#cb174-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(people) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb172"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(people) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb176"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a>splitPeople <span class="ot">&lt;-</span><span class="fu">strsplit</span>(people,<span class="st">","</span>)</span>
-<span id="cb176-2"><a href="#cb176-2" aria-hidden="true" tabindex="-1"></a>splitPeople</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb174"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb174-1"><a href="#cb174-1" aria-hidden="true" tabindex="-1"></a>splitPeople <span class="ot">&lt;-</span><span class="fu">strsplit</span>(people,<span class="st">","</span>)</span>
+<span id="cb174-2"><a href="#cb174-2" aria-hidden="true" tabindex="-1"></a>splitPeople</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "Cohen" "Sam"  
@@ -2643,18 +2643,18 @@ click here for the answer - part b - for loop
 [[3]]
 [1] "Andrews" "Claire" </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb178"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb178-1"><a href="#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first name (i.e. the 2nd position) for "Andrews,Claire"</span></span>
-<span id="cb178-2"><a href="#cb178-2" aria-hidden="true" tabindex="-1"></a>splitPeople[[<span class="dv">3</span>]][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb176"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb176-1"><a href="#cb176-1" aria-hidden="true" tabindex="-1"></a><span class="co"># print the first name (i.e. the 2nd position) for "Andrews,Claire"</span></span>
+<span id="cb176-2"><a href="#cb176-2" aria-hidden="true" tabindex="-1"></a>splitPeople[[<span class="dv">3</span>]][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Claire"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb180"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb180-1"><a href="#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use a colon as a separator</span></span>
-<span id="cb180-2"><a href="#cb180-2" aria-hidden="true" tabindex="-1"></a>places <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"New York:NY:USA"</span>, <span class="st">"Jerusalem::IL"</span>, <span class="st">"LA:CA:USA"</span>, <span class="st">"Miami:FL:USA"</span>)</span>
-<span id="cb180-3"><a href="#cb180-3" aria-hidden="true" tabindex="-1"></a>places</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb178"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb178-1"><a href="#cb178-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use a colon as a separator</span></span>
+<span id="cb178-2"><a href="#cb178-2" aria-hidden="true" tabindex="-1"></a>places <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"New York:NY:USA"</span>, <span class="st">"Jerusalem::IL"</span>, <span class="st">"LA:CA:USA"</span>, <span class="st">"Miami:FL:USA"</span>)</span>
+<span id="cb178-3"><a href="#cb178-3" aria-hidden="true" tabindex="-1"></a>places</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "New York:NY:USA" "Jerusalem::IL"   "LA:CA:USA"       "Miami:FL:USA"   </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb182"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb182-1"><a href="#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="fu">strsplit</span>(places, <span class="st">":"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb180"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb180-1"><a href="#cb180-1" aria-hidden="true" tabindex="-1"></a><span class="fu">strsplit</span>(places, <span class="st">":"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "New York" "NY"       "USA"     
@@ -2668,33 +2668,33 @@ click here for the answer - part b - for loop
 [[4]]
 [1] "Miami" "FL"    "USA"  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb184"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb184-1"><a href="#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that strsplit returns a LIST even if there is only one </span></span>
-<span id="cb184-2"><a href="#cb184-2" aria-hidden="true" tabindex="-1"></a><span class="co"># value in the character vector</span></span>
-<span id="cb184-3"><a href="#cb184-3" aria-hidden="true" tabindex="-1"></a>fruit <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"apple,orange,pear"</span>)</span>
-<span id="cb184-4"><a href="#cb184-4" aria-hidden="true" tabindex="-1"></a>fruit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb182"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb182-1"><a href="#cb182-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that strsplit returns a LIST even if there is only one </span></span>
+<span id="cb182-2"><a href="#cb182-2" aria-hidden="true" tabindex="-1"></a><span class="co"># value in the character vector</span></span>
+<span id="cb182-3"><a href="#cb182-3" aria-hidden="true" tabindex="-1"></a>fruit <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"apple,orange,pear"</span>)</span>
+<span id="cb182-4"><a href="#cb182-4" aria-hidden="true" tabindex="-1"></a>fruit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "apple,orange,pear"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb186"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb186-1"><a href="#cb186-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb184"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb184-1"><a href="#cb184-1" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb188"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb188-1"><a href="#cb188-1" aria-hidden="true" tabindex="-1"></a>splitFruit <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(fruit,   <span class="st">","</span>)</span>
-<span id="cb188-2"><a href="#cb188-2" aria-hidden="true" tabindex="-1"></a>splitFruit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb186"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb186-1"><a href="#cb186-1" aria-hidden="true" tabindex="-1"></a>splitFruit <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(fruit,   <span class="st">","</span>)</span>
+<span id="cb186-2"><a href="#cb186-2" aria-hidden="true" tabindex="-1"></a>splitFruit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "apple"  "orange" "pear"  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb190"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb190-1"><a href="#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># display just the 2nd fruit (notice the [[double-brackets]][single-brackets])</span></span>
-<span id="cb190-2"><a href="#cb190-2" aria-hidden="true" tabindex="-1"></a>splitFruit[[<span class="dv">1</span>]][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb188"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb188-1"><a href="#cb188-1" aria-hidden="true" tabindex="-1"></a><span class="co"># display just the 2nd fruit (notice the [[double-brackets]][single-brackets])</span></span>
+<span id="cb188-2"><a href="#cb188-2" aria-hidden="true" tabindex="-1"></a>splitFruit[[<span class="dv">1</span>]][<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "orange"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb192"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb192-1"><a href="#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If the separator is the "empty string" (i.e. "") then </span></span>
-<span id="cb192-2"><a href="#cb192-2" aria-hidden="true" tabindex="-1"></a><span class="co"># every character (e.g. letter, digit, space,!,@,#,$,%, etc)</span></span>
-<span id="cb192-3"><a href="#cb192-3" aria-hidden="true" tabindex="-1"></a><span class="co"># is split into separate character values</span></span>
-<span id="cb192-4"><a href="#cb192-4" aria-hidden="true" tabindex="-1"></a>words <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"racecar"</span>, <span class="st">"pineapple"</span>, <span class="st">"cart"</span>)</span>
-<span id="cb192-5"><a href="#cb192-5" aria-hidden="true" tabindex="-1"></a><span class="fu">strsplit</span>(words,<span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb190"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb190-1"><a href="#cb190-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If the separator is the "empty string" (i.e. "") then </span></span>
+<span id="cb190-2"><a href="#cb190-2" aria-hidden="true" tabindex="-1"></a><span class="co"># every character (e.g. letter, digit, space,!,@,#,$,%, etc)</span></span>
+<span id="cb190-3"><a href="#cb190-3" aria-hidden="true" tabindex="-1"></a><span class="co"># is split into separate character values</span></span>
+<span id="cb190-4"><a href="#cb190-4" aria-hidden="true" tabindex="-1"></a>words <span class="ot">=</span> <span class="fu">c</span>(<span class="st">"racecar"</span>, <span class="st">"pineapple"</span>, <span class="st">"cart"</span>)</span>
+<span id="cb190-5"><a href="#cb190-5" aria-hidden="true" tabindex="-1"></a><span class="fu">strsplit</span>(words,<span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "r" "a" "c" "e" "c" "a" "r"
@@ -2705,40 +2705,40 @@ click here for the answer - part b - for loop
 [[3]]
 [1] "c" "a" "r" "t"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb194"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb194-1"><a href="#cb194-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember that strsplit returns a list EVEN if there</span></span>
-<span id="cb194-2"><a href="#cb194-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is only one character value being split. You will need to </span></span>
-<span id="cb194-3"><a href="#cb194-3" aria-hidden="true" tabindex="-1"></a><span class="co"># keep this in mind when writing the code.</span></span>
-<span id="cb194-4"><a href="#cb194-4" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="st">"racecar"</span></span>
-<span id="cb194-5"><a href="#cb194-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(word,<span class="st">""</span>)</span>
-<span id="cb194-6"><a href="#cb194-6" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb192"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb192-1"><a href="#cb192-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Remember that strsplit returns a list EVEN if there</span></span>
+<span id="cb192-2"><a href="#cb192-2" aria-hidden="true" tabindex="-1"></a><span class="co"># is only one character value being split. You will need to </span></span>
+<span id="cb192-3"><a href="#cb192-3" aria-hidden="true" tabindex="-1"></a><span class="co"># keep this in mind when writing the code.</span></span>
+<span id="cb192-4"><a href="#cb192-4" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="st">"racecar"</span></span>
+<span id="cb192-5"><a href="#cb192-5" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(word,<span class="st">""</span>)</span>
+<span id="cb192-6"><a href="#cb192-6" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "r" "a" "c" "e" "c" "a" "r"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb196"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb196-1"><a href="#cb196-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>]       <span class="co"># still a list </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb194"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb194-1"><a href="#cb194-1" aria-hidden="true" tabindex="-1"></a>y[<span class="dv">1</span>]       <span class="co"># still a list </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 [1] "r" "a" "c" "e" "c" "a" "r"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb198"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb198-1"><a href="#cb198-1" aria-hidden="true" tabindex="-1"></a>y[[<span class="dv">1</span>]]     <span class="co"># the vector without the surrounding list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb196"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb196-1"><a href="#cb196-1" aria-hidden="true" tabindex="-1"></a>y[[<span class="dv">1</span>]]     <span class="co"># the vector without the surrounding list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "r" "a" "c" "e" "c" "a" "r"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb200"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb200-1"><a href="#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(y)  <span class="co"># the vector without the surrounding list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb198"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb198-1"><a href="#cb198-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(y)  <span class="co"># the vector without the surrounding list</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "r" "a" "c" "e" "c" "a" "r"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb202"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb202-1"><a href="#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="co"># display the 2nd letter of the word</span></span>
-<span id="cb202-2"><a href="#cb202-2" aria-hidden="true" tabindex="-1"></a>y[[<span class="dv">1</span>]][<span class="dv">2</span>]    <span class="co"># one way</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb200"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb200-1"><a href="#cb200-1" aria-hidden="true" tabindex="-1"></a><span class="co"># display the 2nd letter of the word</span></span>
+<span id="cb200-2"><a href="#cb200-2" aria-hidden="true" tabindex="-1"></a>y[[<span class="dv">1</span>]][<span class="dv">2</span>]    <span class="co"># one way</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb204"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb204-1"><a href="#cb204-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(y)[<span class="dv">2</span>] <span class="co"># another way</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb202"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb202-1"><a href="#cb202-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unlist</span>(y)[<span class="dv">2</span>] <span class="co"># another way</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb206"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb206-1"><a href="#cb206-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> y[[<span class="dv">1</span>]]  <span class="co"># you could use a variable</span></span>
-<span id="cb206-2"><a href="#cb206-2" aria-hidden="true" tabindex="-1"></a>z[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb204"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb204-1"><a href="#cb204-1" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> y[[<span class="dv">1</span>]]  <span class="co"># you could use a variable</span></span>
+<span id="cb204-2"><a href="#cb204-2" aria-hidden="true" tabindex="-1"></a>z[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "a"</code></pre>
 </div>
@@ -2748,85 +2748,85 @@ click here for the answer - part b - for loop
 <section id="ispalindromex-with-a-while-loop" class="level3">
 <h3 class="anchored" data-anchor-id="ispalindromex-with-a-while-loop">isPalindrome(x) with a while loop</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb208"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb208-1"><a href="#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
-<span id="cb208-2"><a href="#cb208-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb208-3"><a href="#cb208-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's get back to coding the isPalindrome function ...</span></span>
-<span id="cb208-4"><a href="#cb208-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb208-5"><a href="#cb208-5" aria-hidden="true" tabindex="-1"></a><span class="co">#    ... first let's do it with a while loop</span></span>
-<span id="cb208-6"><a href="#cb208-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb208-7"><a href="#cb208-7" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
-<span id="cb208-8"><a href="#cb208-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb208-9"><a href="#cb208-9" aria-hidden="true" tabindex="-1"></a>isPalindrome <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb208-10"><a href="#cb208-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.character</span>(x) <span class="sc">|</span> <span class="fu">length</span>(x) <span class="sc">!=</span><span class="dv">1</span>){</span>
-<span id="cb208-11"><a href="#cb208-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"x must have a single character value"</span>)</span>
-<span id="cb208-12"><a href="#cb208-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb208-13"><a href="#cb208-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb208-14"><a href="#cb208-14" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(x, <span class="st">""</span>)[[<span class="dv">1</span>]]   <span class="co"># get the individual letters in a vector</span></span>
-<span id="cb208-15"><a href="#cb208-15" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb208-16"><a href="#cb208-16" aria-hidden="true" tabindex="-1"></a>  left  <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb208-17"><a href="#cb208-17" aria-hidden="true" tabindex="-1"></a>  right <span class="ot">=</span> <span class="fu">length</span>(lets)</span>
-<span id="cb208-18"><a href="#cb208-18" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb208-19"><a href="#cb208-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ( left <span class="sc">&lt;</span> right) {</span>
-<span id="cb208-20"><a href="#cb208-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(lets[left] <span class="sc">!=</span> lets[right]){</span>
-<span id="cb208-21"><a href="#cb208-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb208-22"><a href="#cb208-22" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb208-23"><a href="#cb208-23" aria-hidden="true" tabindex="-1"></a>    left <span class="ot">=</span> left <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb208-24"><a href="#cb208-24" aria-hidden="true" tabindex="-1"></a>    right <span class="ot">=</span> right <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb208-25"><a href="#cb208-25" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb208-26"><a href="#cb208-26" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb208-27"><a href="#cb208-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
-<span id="cb208-28"><a href="#cb208-28" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb208-29"><a href="#cb208-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb208-30"><a href="#cb208-30" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdxba"</span>)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb206"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb206-1"><a href="#cb206-1" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
+<span id="cb206-2"><a href="#cb206-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb206-3"><a href="#cb206-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's get back to coding the isPalindrome function ...</span></span>
+<span id="cb206-4"><a href="#cb206-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb206-5"><a href="#cb206-5" aria-hidden="true" tabindex="-1"></a><span class="co">#    ... first let's do it with a while loop</span></span>
+<span id="cb206-6"><a href="#cb206-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb206-7"><a href="#cb206-7" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
+<span id="cb206-8"><a href="#cb206-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-9"><a href="#cb206-9" aria-hidden="true" tabindex="-1"></a>isPalindrome <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb206-10"><a href="#cb206-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.character</span>(x) <span class="sc">|</span> <span class="fu">length</span>(x) <span class="sc">!=</span><span class="dv">1</span>){</span>
+<span id="cb206-11"><a href="#cb206-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"x must have a single character value"</span>)</span>
+<span id="cb206-12"><a href="#cb206-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb206-13"><a href="#cb206-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb206-14"><a href="#cb206-14" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(x, <span class="st">""</span>)[[<span class="dv">1</span>]]   <span class="co"># get the individual letters in a vector</span></span>
+<span id="cb206-15"><a href="#cb206-15" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb206-16"><a href="#cb206-16" aria-hidden="true" tabindex="-1"></a>  left  <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb206-17"><a href="#cb206-17" aria-hidden="true" tabindex="-1"></a>  right <span class="ot">=</span> <span class="fu">length</span>(lets)</span>
+<span id="cb206-18"><a href="#cb206-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb206-19"><a href="#cb206-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ( left <span class="sc">&lt;</span> right) {</span>
+<span id="cb206-20"><a href="#cb206-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(lets[left] <span class="sc">!=</span> lets[right]){</span>
+<span id="cb206-21"><a href="#cb206-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb206-22"><a href="#cb206-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb206-23"><a href="#cb206-23" aria-hidden="true" tabindex="-1"></a>    left <span class="ot">=</span> left <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb206-24"><a href="#cb206-24" aria-hidden="true" tabindex="-1"></a>    right <span class="ot">=</span> right <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb206-25"><a href="#cb206-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb206-26"><a href="#cb206-26" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb206-27"><a href="#cb206-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb206-28"><a href="#cb206-28" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb206-29"><a href="#cb206-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb206-30"><a href="#cb206-30" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdxba"</span>)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb210"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb210-1"><a href="#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdcba"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb208"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb208-1"><a href="#cb208-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdcba"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb212"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb212-1"><a href="#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"racecar"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb210"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb210-1"><a href="#cb210-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"racecar"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb214"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb214-1"><a href="#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"amanaplanacanalpanama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb212"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb212-1"><a href="#cb212-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"amanaplanacanalpanama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb216"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb216-1"><a href="#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"a man a plan a canal panama"</span>)  <span class="co"># FALSE - because of the spaces</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb214"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb214-1"><a href="#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"a man a plan a canal panama"</span>)  <span class="co"># FALSE - because of the spaces</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb218"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb218-1"><a href="#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
-<span id="cb218-2"><a href="#cb218-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Rewrite the function so that it removes spaces before</span></span>
-<span id="cb218-3"><a href="#cb218-3" aria-hidden="true" tabindex="-1"></a><span class="co"># checking to see if x is a palindrome</span></span>
-<span id="cb218-4"><a href="#cb218-4" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
-<span id="cb218-5"><a href="#cb218-5" aria-hidden="true" tabindex="-1"></a>isPalindrome <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb218-6"><a href="#cb218-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.character</span>(x) <span class="sc">|</span> <span class="fu">length</span>(x) <span class="sc">!=</span><span class="dv">1</span>){</span>
-<span id="cb218-7"><a href="#cb218-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"x must have a single character value"</span>)</span>
-<span id="cb218-8"><a href="#cb218-8" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb218-9"><a href="#cb218-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb218-10"><a href="#cb218-10" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(x, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
-<span id="cb218-11"><a href="#cb218-11" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb218-12"><a href="#cb218-12" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> lets [ lets <span class="sc">!=</span> <span class="st">" "</span> ]  <span class="co"># get rid of the spaces from lets</span></span>
-<span id="cb218-13"><a href="#cb218-13" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb218-14"><a href="#cb218-14" aria-hidden="true" tabindex="-1"></a>  left  <span class="ot">=</span> <span class="dv">1</span></span>
-<span id="cb218-15"><a href="#cb218-15" aria-hidden="true" tabindex="-1"></a>  right <span class="ot">=</span> <span class="fu">length</span>(lets)</span>
-<span id="cb218-16"><a href="#cb218-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb218-17"><a href="#cb218-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ( left <span class="sc">&lt;</span> right) {</span>
-<span id="cb218-18"><a href="#cb218-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(lets[left] <span class="sc">!=</span> lets[right]){</span>
-<span id="cb218-19"><a href="#cb218-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb218-20"><a href="#cb218-20" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb218-21"><a href="#cb218-21" aria-hidden="true" tabindex="-1"></a>    left <span class="ot">=</span> left <span class="sc">+</span> <span class="dv">1</span></span>
-<span id="cb218-22"><a href="#cb218-22" aria-hidden="true" tabindex="-1"></a>    right <span class="ot">=</span> right <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb218-23"><a href="#cb218-23" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb218-24"><a href="#cb218-24" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb218-25"><a href="#cb218-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
-<span id="cb218-26"><a href="#cb218-26" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb218-27"><a href="#cb218-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb218-28"><a href="#cb218-28" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"a man a plan a canal panama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb216"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb216-1"><a href="#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
+<span id="cb216-2"><a href="#cb216-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Rewrite the function so that it removes spaces before</span></span>
+<span id="cb216-3"><a href="#cb216-3" aria-hidden="true" tabindex="-1"></a><span class="co"># checking to see if x is a palindrome</span></span>
+<span id="cb216-4"><a href="#cb216-4" aria-hidden="true" tabindex="-1"></a><span class="co">#.........................................................</span></span>
+<span id="cb216-5"><a href="#cb216-5" aria-hidden="true" tabindex="-1"></a>isPalindrome <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb216-6"><a href="#cb216-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.character</span>(x) <span class="sc">|</span> <span class="fu">length</span>(x) <span class="sc">!=</span><span class="dv">1</span>){</span>
+<span id="cb216-7"><a href="#cb216-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"x must have a single character value"</span>)</span>
+<span id="cb216-8"><a href="#cb216-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb216-9"><a href="#cb216-9" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb216-10"><a href="#cb216-10" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(x, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb216-11"><a href="#cb216-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb216-12"><a href="#cb216-12" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> lets [ lets <span class="sc">!=</span> <span class="st">" "</span> ]  <span class="co"># get rid of the spaces from lets</span></span>
+<span id="cb216-13"><a href="#cb216-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb216-14"><a href="#cb216-14" aria-hidden="true" tabindex="-1"></a>  left  <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb216-15"><a href="#cb216-15" aria-hidden="true" tabindex="-1"></a>  right <span class="ot">=</span> <span class="fu">length</span>(lets)</span>
+<span id="cb216-16"><a href="#cb216-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb216-17"><a href="#cb216-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> ( left <span class="sc">&lt;</span> right) {</span>
+<span id="cb216-18"><a href="#cb216-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(lets[left] <span class="sc">!=</span> lets[right]){</span>
+<span id="cb216-19"><a href="#cb216-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb216-20"><a href="#cb216-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb216-21"><a href="#cb216-21" aria-hidden="true" tabindex="-1"></a>    left <span class="ot">=</span> left <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb216-22"><a href="#cb216-22" aria-hidden="true" tabindex="-1"></a>    right <span class="ot">=</span> right <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb216-23"><a href="#cb216-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb216-24"><a href="#cb216-24" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb216-25"><a href="#cb216-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)</span>
+<span id="cb216-26"><a href="#cb216-26" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb216-27"><a href="#cb216-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb216-28"><a href="#cb216-28" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"a man a plan a canal panama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -2835,53 +2835,53 @@ click here for the answer - part b - for loop
 <section id="ispalindromex-with-a-for-loop" class="level3">
 <h3 class="anchored" data-anchor-id="ispalindromex-with-a-for-loop">isPalindrome(x) with a for loop</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb220"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb220-1"><a href="#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="co">#................................................</span></span>
-<span id="cb220-2"><a href="#cb220-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb220-3"><a href="#cb220-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Rewrite the code to use a for loop</span></span>
-<span id="cb220-4"><a href="#cb220-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb220-5"><a href="#cb220-5" aria-hidden="true" tabindex="-1"></a><span class="co">#................................................</span></span>
-<span id="cb220-6"><a href="#cb220-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-7"><a href="#cb220-7" aria-hidden="true" tabindex="-1"></a>isPalindrome <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb220-8"><a href="#cb220-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-9"><a href="#cb220-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.character</span>(x) <span class="sc">|</span> <span class="fu">length</span>(x) <span class="sc">!=</span><span class="dv">1</span>){</span>
-<span id="cb220-10"><a href="#cb220-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"x must have a single character value"</span>)</span>
-<span id="cb220-11"><a href="#cb220-11" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb220-12"><a href="#cb220-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb220-13"><a href="#cb220-13" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(x, <span class="st">""</span>)[[<span class="dv">1</span>]]   <span class="co"># get the individual letters in a vector</span></span>
-<span id="cb220-14"><a href="#cb220-14" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb220-15"><a href="#cb220-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># get rid of the spaces from lets</span></span>
-<span id="cb220-16"><a href="#cb220-16" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> lets [ lets <span class="sc">!=</span> <span class="st">" "</span> ]</span>
-<span id="cb220-17"><a href="#cb220-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-18"><a href="#cb220-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> ( num <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">trunc</span>(<span class="fu">length</span>(lets)<span class="sc">/</span><span class="dv">2</span>) ){</span>
-<span id="cb220-19"><a href="#cb220-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># note: num will start at 1, then 2, then 3, up until 1/2 the length of the word</span></span>
-<span id="cb220-20"><a href="#cb220-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># exmpale: for "racecar" num will be 1 then 2 then 3 then stop</span></span>
-<span id="cb220-21"><a href="#cb220-21" aria-hidden="true" tabindex="-1"></a>    first <span class="ot">=</span> num</span>
-<span id="cb220-22"><a href="#cb220-22" aria-hidden="true" tabindex="-1"></a>    last <span class="ot">=</span> <span class="fu">length</span>(lets)<span class="sc">-</span>num<span class="sc">+</span><span class="dv">1</span></span>
-<span id="cb220-23"><a href="#cb220-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( lets[first] <span class="sc">!=</span>  lets[last]){</span>
-<span id="cb220-24"><a href="#cb220-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
-<span id="cb220-25"><a href="#cb220-25" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb220-26"><a href="#cb220-26" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb220-27"><a href="#cb220-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)  </span>
-<span id="cb220-28"><a href="#cb220-28" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb220-29"><a href="#cb220-29" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb220-30"><a href="#cb220-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb220-31"><a href="#cb220-31" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdxba"</span>)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb218"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb218-1"><a href="#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="co">#................................................</span></span>
+<span id="cb218-2"><a href="#cb218-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb218-3"><a href="#cb218-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Rewrite the code to use a for loop</span></span>
+<span id="cb218-4"><a href="#cb218-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb218-5"><a href="#cb218-5" aria-hidden="true" tabindex="-1"></a><span class="co">#................................................</span></span>
+<span id="cb218-6"><a href="#cb218-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb218-7"><a href="#cb218-7" aria-hidden="true" tabindex="-1"></a>isPalindrome <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb218-8"><a href="#cb218-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb218-9"><a href="#cb218-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.character</span>(x) <span class="sc">|</span> <span class="fu">length</span>(x) <span class="sc">!=</span><span class="dv">1</span>){</span>
+<span id="cb218-10"><a href="#cb218-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"x must have a single character value"</span>)</span>
+<span id="cb218-11"><a href="#cb218-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb218-12"><a href="#cb218-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb218-13"><a href="#cb218-13" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(x, <span class="st">""</span>)[[<span class="dv">1</span>]]   <span class="co"># get the individual letters in a vector</span></span>
+<span id="cb218-14"><a href="#cb218-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb218-15"><a href="#cb218-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># get rid of the spaces from lets</span></span>
+<span id="cb218-16"><a href="#cb218-16" aria-hidden="true" tabindex="-1"></a>  lets <span class="ot">&lt;-</span> lets [ lets <span class="sc">!=</span> <span class="st">" "</span> ]</span>
+<span id="cb218-17"><a href="#cb218-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb218-18"><a href="#cb218-18" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> ( num <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">trunc</span>(<span class="fu">length</span>(lets)<span class="sc">/</span><span class="dv">2</span>) ){</span>
+<span id="cb218-19"><a href="#cb218-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># note: num will start at 1, then 2, then 3, up until 1/2 the length of the word</span></span>
+<span id="cb218-20"><a href="#cb218-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># exmpale: for "racecar" num will be 1 then 2 then 3 then stop</span></span>
+<span id="cb218-21"><a href="#cb218-21" aria-hidden="true" tabindex="-1"></a>    first <span class="ot">=</span> num</span>
+<span id="cb218-22"><a href="#cb218-22" aria-hidden="true" tabindex="-1"></a>    last <span class="ot">=</span> <span class="fu">length</span>(lets)<span class="sc">-</span>num<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb218-23"><a href="#cb218-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>( lets[first] <span class="sc">!=</span>  lets[last]){</span>
+<span id="cb218-24"><a href="#cb218-24" aria-hidden="true" tabindex="-1"></a>      <span class="fu">return</span>(<span class="cn">FALSE</span>)</span>
+<span id="cb218-25"><a href="#cb218-25" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb218-26"><a href="#cb218-26" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb218-27"><a href="#cb218-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="cn">TRUE</span>)  </span>
+<span id="cb218-28"><a href="#cb218-28" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb218-29"><a href="#cb218-29" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb218-30"><a href="#cb218-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb218-31"><a href="#cb218-31" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdxba"</span>)  <span class="co"># FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb222"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb222-1"><a href="#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdcba"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb220"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb220-1"><a href="#cb220-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"abcdcba"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb224"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb224-1"><a href="#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"racecar"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb222"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb222-1"><a href="#cb222-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"racecar"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb226"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb226-1"><a href="#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"amanaplanacanalpanama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb224"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb224-1"><a href="#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"amanaplanacanalpanama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb228"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb228-1"><a href="#cb228-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"a man a plan a canal panama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb226"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb226-1"><a href="#cb226-1" aria-hidden="true" tabindex="-1"></a><span class="fu">isPalindrome</span>(<span class="st">"a man a plan a canal panama"</span>)  <span class="co"># TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
