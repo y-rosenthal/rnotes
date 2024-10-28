@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -483,7 +517,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#standard-numeric-operators-i.e.--" id="toc-standard-numeric-operators-i.e.--" class="nav-link active" data-scroll-target="#standard-numeric-operators-i.e.--"><span class="header-section-number">3.1</span> Standard numeric operators, i.e.&nbsp;+ - * / ^</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -508,57 +548,87 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>NOTE: The contents of this document was adapted from <a href="https://www.datamentor.io/r-programming/precedence-associativity/" class="uri">https://www.datamentor.io/r-programming/precedence-associativity/</a></p>
-<p><strong>R Operator Precedence and Associativity in R</strong></p>
-<p><strong>Standard numeric operators, i.e.&nbsp;+ - * / ^</strong></p>
+<section id="standard-numeric-operators-i.e.--" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="standard-numeric-operators-i.e.--"><span class="header-section-number">3.1</span> Standard numeric operators, i.e.&nbsp;+ - * / ^</h2>
 <p>R recognizes the “order of operations” of the standard mathematical operators, (+ - * / ^). Many students are familiar with the acronym “PEMDAS” order of operations for the standard arithmetic operators (+ - * / ^). This stands for:</p>
 <p>First: Parentheses<br>
 Second: Exponents<br>
 Third: Multiplication and Division (in the order that they appear)<br>
 Fourth: Addition and Subtraction (in the order that they appear)</p>
-<p>&gt; 2 + 6 * 5&nbsp;&nbsp;&nbsp;&nbsp; # 6*5 is done first<br>
-[1] 32<br>
-<br>
-&gt; (2 + 6) * 5&nbsp;&nbsp; # 2+6 is done first<br>
-[1] 40</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">+</span> <span class="dv">6</span> <span class="sc">*</span> <span class="dv">5</span>    <span class="co"># 6 * 5 is done first</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 32</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="sc">+</span> <span class="dv">6</span>) <span class="sc">*</span> <span class="dv">5</span>  <span class="co"># (2 + 6) is done first</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 40</code></pre>
+</div>
+</div>
 <p><strong>Additional operators in R</strong></p>
-<p>In addition to the standard mathematical operators, R recognizes numerous other “operators”. &nbsp;&nbsp;For example:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 82 %/% 10 is 8 as the %/% operator performs integer division and<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 82 %% 10 is 2 as the %% operator results in the “remainder” of a division.<br>
-As you learn R you will become familiar with many additional operators.</p>
-<p>R defines an “order of operations” that goes beyond PEMDAS. R’s complete order of operations includes all of R’s operators. This “order of operations” is summarized in the table on the next page. Operators that appear higher in the table have a “higher precedence” (i.e.&nbsp;they are done before operators that appear lower in the table).</p>
+<p>In addition to the standard mathematical operators, R recognizes numerous other “operators”. For example:<br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">82</span> <span class="sc">%/%</span> <span class="dv">10</span> <span class="co"># answer is 8 as the %/% operator performs integer division and </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">82</span> <span class="sc">%%</span> <span class="dv">10</span>  <span class="co"># answer is 2 as the %% operator results in the "remainder" of a division. </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>As you learn R you will become familiar with many additional operators.</p>
+<p>R defines an “order of operations” that goes beyond PEMDAS. R’s complete order of operations includes all of R’s operators. This “order of operations” is summarized in the table below. Operators that appear higher in the table have a “higher precedence” (i.e.&nbsp;they are done before operators that appear lower in the table).</p>
 <p>For example, you can see that the ^ operator appears before the other arithmetic operators. Similarly, * and / appear above + and -.<br>
 However, note that %/% and %% appear above * and /. This would explain why code below produces the output that it does (read the code and the #comments)</p>
-<p>&gt; 100 / 25 %% 2&nbsp;&nbsp;&nbsp; # 25 %% 2 is done first (remember %% is remainder - so 25 %% 2 is 1 and 100/1 is 100)<br>
-[1] 100<br>
-<br>
-&gt; (100 / 25) %% 2&nbsp;&nbsp;&nbsp; # 100 / 25 is done first&nbsp; (remember %% is remainder - so 100/25 is 4 and 4 %% 2 is 0)<br>
-&nbsp;[1] 0</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># In the following code, 25 %% 2 is done first </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (remember %% is remainder - so 25 %% 2 is 1 and 100/1 is 100)</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="sc">/</span> <span class="dv">25</span> <span class="sc">%%</span> <span class="dv">2</span>   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 100</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The parentheses in the code below changes this so that the (100/25) is now</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># done first. This leads to a different answer.</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># (remember %% is remainder - so 100/25 is 4 and 4 %% 2 is 0)</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>(<span class="dv">100</span> <span class="sc">/</span> <span class="dv">25</span>) <span class="sc">%%</span> <span class="dv">2</span>   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
 <p><strong>Operator Associativity</strong></p>
 <p>It is possible to have multiple operators of same precedence in an expression. In this case the order of execution is determined through associativity. The associativity of operators is given in the table below. We can see that most of them have left to right associativity.</p>
 <p><strong>Example 2: Operator Associativity in R</strong></p>
-<p>In the above below,&nbsp;6 / 3 / 2&nbsp;is evaluated as&nbsp;(6 / 3) / 2&nbsp;due to left to right associativity of the&nbsp;/&nbsp;operator.<br>
-However, 2 ^ 1 ^ 3 &nbsp;is evaluated as 2 ^ (1 ^ 3) &nbsp;due to right to left associativity of the ^ operator.<br>
-<br>
-<br>
+<p>The / operator is “left to right associative”. This means that 6 / 3 / 2 is evaluated as (6 / 3) / 2 due to left to right associativity of the / operator.<br>
 </p>
-<p>&gt; 6 / 3 / 2&nbsp;&nbsp; # / is left to right associative<br>
-[1] 1<br>
-<br>
-&gt; 2 ^ 1 ^ 3&nbsp;&nbsp; # ^ is right to left associative<br>
-[1] 2</p>
-<p>However, these defaults can be changed by using parentheses ().</p>
-<p>&gt; 6 / (3 / 2)<br>
-[1] 4<br>
-<br>
-&gt; (2 ^ 1) ^ 3<br>
-[1] 8<strong><br>
-</strong></p>
+<p>However, the ^ operator is “right to left associative”. This means that 2 ^ 1 ^ 3 is evaluated as 2 ^ (1 ^ 3) due to right to left associativity of the ^ operator.<br>
+</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="sc">/</span> <span class="dv">3</span> <span class="sc">/</span> <span class="dv">2</span>   <span class="co"># same as (6 / 3) / 2, because / is left to right associative</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">^</span> <span class="dv">1</span> <span class="sc">^</span> <span class="dv">3</span>   <span class="co"># same as 2 ^ (1 ^ 3), because ^ is right to left associative</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<p>However, these defaults can be changed by using (parentheses).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dv">6</span> <span class="sc">/</span> (<span class="dv">3</span> <span class="sc">/</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="sc">^</span> <span class="dv">1</span>) <span class="sc">^</span> <span class="dv">3</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8</code></pre>
+</div>
+</div>
 <p><strong>Precedence and Associativity of different operators in R from highest to lowest</strong></p>
-<p>The list of operators below contains the basic operators but is not 100% complete. For the full list, see the official documentation<br>
-by typing ?Syntax in RStudio<br>
-or at this webpage: <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Syntax" class="uri">https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Syntax</a><br>
-<br>
-</p>
+<p>The list of operators below contains the basic operators but is not 100% complete. For the full list, see the official documentation by typing ?Syntax in RStudio or see this webpage: <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Syntax" class="uri">https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/Syntax</a></p>
 <table class="table">
 <colgroup>
 <col style="width: 58%">
@@ -626,6 +696,7 @@ Integer Division</td>
 </table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
