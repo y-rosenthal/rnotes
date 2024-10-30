@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000100-a-installingAndUsingR-v011-afterClass.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing and using R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><yrchapternumber>1. </yrchapternumber> Installing and using R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -232,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">(a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -953,12 +953,12 @@ click here for answer
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">10</span>,<span class="dv">50</span>,<span class="dv">51</span>)                  <span class="co"># generate 10 random numbers between 50 and 51</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 50.51067 50.38923 50.99139 50.86301 50.24223 50.69838 50.20223 50.21655
- [9] 50.68517 50.85008</code></pre>
+<pre><code> [1] 50.35386 50.42920 50.24748 50.64030 50.88060 50.54126 50.72567 50.18413
+ [9] 50.19776 50.84698</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">runif</span>(<span class="dv">10</span>,<span class="dv">50</span>,<span class="dv">51</span>),<span class="at">digits=</span><span class="dv">2</span>)  <span class="co"># ANSWER </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 50.91 50.97 50.13 50.66 50.43 50.48 50.49 50.47 50.33 50.33</code></pre>
+<pre><code> [1] 50.75 50.18 50.69 50.31 50.47 50.46 50.33 50.32 50.50 50.72</code></pre>
 </div>
 </div>
 </div>
@@ -2070,36 +2070,36 @@ click here for answer
 <div class="sourceCode cell-code" id="cb135"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb135-1"><a href="#cb135-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">floor</span>(<span class="fu">runif</span>(<span class="dv">50</span>,<span class="dv">1</span>,<span class="dv">100</span>))</span>
 <span id="cb135-2"><a href="#cb135-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 82 35 64 47 72 18 95 63 43 28 99 13 46 55 60 65 72 18 46 39 16 49 45 15 29
-[26] 78 78 52 31 71 35 62 56 26 92 32 72 39 85  9 24  4 12 89 40 78 56 30  1 50</code></pre>
+<pre><code> [1] 12 86  4 91 24 68 43 61 71 32 40 85 15 58 74 23 58 67 70 94 19 89 30 13 64
+[26] 71 15 14 16 91 59  5 98 43 32 85 35 66 86 95 25 45 62 34 93 98 73 80 33 62</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb137"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb137-1"><a href="#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 25.79704</code></pre>
+<pre><code>[1] 29.04747</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb139"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb139-1"><a href="#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 48.32</code></pre>
+<pre><code>[1] 54.14</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb141"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 9.624438</code></pre>
+<pre><code>[1] 10.5688</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb143"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a href="#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x) <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 87.01556</code></pre>
+<pre><code>[1] 97.7112</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb145"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href="#cb145-1" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&lt;=</span> <span class="fu">mean</span>(x) <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">sd</span>(x)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 9 4 1</code></pre>
+<pre><code>[1] 4 5</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb147"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a href="#cb147-1" aria-hidden="true" tabindex="-1"></a>x[x <span class="sc">&gt;=</span> <span class="fu">mean</span>(x) <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">sd</span>(x)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 95 99 92 89</code></pre>
+<pre><code>[1] 98 98</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb149"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span> ( x[x <span class="sc">&lt;=</span> <span class="fu">mean</span>(x) <span class="sc">-</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">sd</span>(x)]  ,  x[x <span class="sc">&gt;=</span> <span class="fu">mean</span>(x) <span class="sc">+</span> <span class="fl">1.5</span> <span class="sc">*</span> <span class="fu">sd</span>(x)]  )    <span class="co"># ANSWER</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  9  4  1 95 99 92 89</code></pre>
+<pre><code>[1]  4  5 98 98</code></pre>
 </div>
 </div>
 </div>
