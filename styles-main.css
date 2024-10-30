@@ -2,7 +2,7 @@
     display: none;
 }
 
-yrchapternumber { font-size: 99%; }
+yrchapternumber { font-size: 99%; color: red; }
 
 .yrAppendixChapterNumber {
     display: none;

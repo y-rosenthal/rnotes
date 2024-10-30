@@ -105,6 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
+<script src="yrstuff.js"></script>
 
 
 <link rel="stylesheet" href="styles-main.css">
@@ -153,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000100-a-installingAndUsingR-v011-afterClass.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title"><yrchapternumber>1. </yrchapternumber> Installing and using R</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing and using R</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -231,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./000350-j_j_c-indexingWithLogicalValues_notOperator-v060.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title"><yrchapternumber>12c. </yrchapternumber> (a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">(a) EXCLAMATION POINT (i.e the "not" operator)  (b) is.na( LOGICAL_VECTOR )</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -1728,31 +1729,31 @@ BLASTOFF!!!</code></pre>
 <span id="cb149-31"><a href="#cb149-31" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb149-32"><a href="#cb149-32" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">1</span>)   <span class="co"># one random number between 0 and 1  (not including 0.0 or 1.0)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.5105777</code></pre>
+<pre><code>[1] 0.385943</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb151"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb151-1"><a href="#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">1</span>)   <span class="co"># another random number between 0 and 1  (not including 0.0 or 1.0)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.294481</code></pre>
+<pre><code>[1] 0.2456073</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb153"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb153-1"><a href="#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">3</span>)   <span class="co"># three random numbers between 0 and 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.7949273 0.7611374 0.1292688</code></pre>
+<pre><code>[1] 0.8197288 0.3832756 0.4825752</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb155"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb155-1"><a href="#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">3</span>, <span class="at">min=</span><span class="dv">0</span>, <span class="at">max=</span><span class="dv">100</span>)   <span class="co"># three random numbers between 0 and 100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 69.78173 26.90526 20.36495</code></pre>
+<pre><code>[1]  9.49832 85.09273 93.85167</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb157"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a href="#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="fu">runif</span>(<span class="dv">3</span>, <span class="at">min=</span><span class="dv">500</span>, <span class="at">max=</span><span class="dv">505</span>)   <span class="co"># three random numbers between 500 and 505</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 500.3791 502.0849 502.1895</code></pre>
+<pre><code>[1] 500.3193 503.7932 504.9498</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb159"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb159-1"><a href="#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">trunc</span>(<span class="fu">runif</span>(<span class="dv">25</span>, <span class="at">min=</span><span class="dv">1</span>, <span class="at">max=</span><span class="dv">11</span>))   <span class="co"># 25 random whole numbers between 1 and 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  1  4 10  3  7  5  4  4  8  3  9  2  3  8  2  9  8  7  6  9  1  5  6  6  2</code></pre>
+<pre><code> [1]  4 10  6  2 10  9  3 10  4  6  2  1  7  8  5  7  9 10  8  9  4  1  2  7  2</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb161"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a href="#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="fu">trunc</span>(<span class="fu">runif</span>(<span class="dv">25</span>, <span class="at">min=</span><span class="dv">1</span>, <span class="at">max=</span><span class="dv">11</span>))   <span class="co"># another 25 random whole numbers between 1 and 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  7  4  8  2  5  4  9  1  3  2  3 10  5  1 10  6  4  4  7 10  1  9  9  6  7</code></pre>
+<pre><code> [1] 10  9  3  8  7  1 10  5  1  8  6  8  4  5  2  2  3  4  6  7 10  2  2  6  3</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb163"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb163-1"><a href="#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="co">#-----------------------------</span></span>
 <span id="cb163-2"><a href="#cb163-2" aria-hidden="true" tabindex="-1"></a><span class="co"># set.seed(SOME_WHOLE_NUMBER)</span></span>
